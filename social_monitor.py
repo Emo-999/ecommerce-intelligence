@@ -48,10 +48,22 @@ _GAT = "https://adstransparency.google.com"
 # domain-search links instead).
 SOCIAL_SOURCES = {
     "CloudCart": {
-        "youtube": "UCZpAaKJ0AgLf6jU3Cs1-WIQ",
+        # АКТИВНИТЕ канали (проверени 2026-08-08): БГ YouTube (Shorts),
+        # facebook.com/cloudcart.bulgaria (седмични постове + Reels, ~71
+        # активни реклами), TikTok @cloudcart. Старият глобален YT канал
+        # (UCZpAaKJ0AgLf6jU3Cs1-WIQ) и fb.com/cloudcart спят от 2020/2024.
+        "youtube": "UCj5ApxStsosWLdMVvj7E6mg",
+        "tiktok": "cloudcart",
         "x": "https://x.com/cloudcart",
         "linkedin": "https://www.linkedin.com/company/cloudcart",
-        "facebook": "https://www.facebook.com/cloudcart"},
+        "facebook": "https://www.facebook.com/cloudcart.bulgaria",
+        "instagram": "https://www.instagram.com/cloudcart/",
+        "meta_page_id": "568107196673063",
+        "meta_ads": _MAL + "568107196673063",
+        "note": ("Facebook (cloudcart.bulgaria): седмични постове и Reels, "
+                 "около 71 активни Meta реклами (Ad Library, 08.08.2026); "
+                 "Instagram: 247 поста. Организираният Meta поток не се чете "
+                 "машинно от CI без META_AD_TOKEN.")},
     "Shopify": {
         "youtube": "UCIv38OrggTu3vNkCAo96-CQ",
         "x": "https://x.com/shopify",
@@ -168,6 +180,20 @@ def _google_ads_count(query, ar_id):
     raise ValueError(f"advertiser {ar_id} not in suggestions for '{query}'")
 
 
+def _tiktok_stats(handle):
+    """Публичните броячи на TikTok профил са в HTML-а при обикновен GET
+    (проверено 2026-08-08); списъкът с видеа обаче не е — само общите числа."""
+    r = requests.get(f"https://www.tiktok.com/@{handle}",
+                     headers={"User-Agent": UA}, timeout=20)
+    r.raise_for_status()
+    m_f = re.search(r'"followerCount":(\d+)', r.text)
+    m_v = re.search(r'"videoCount":(\d+)', r.text)
+    if not (m_f and m_v):
+        raise ValueError("профилните броячи липсват в HTML")
+    return {"followers": int(m_f.group(1)), "videos": int(m_v.group(1)),
+            "url": f"https://www.tiktok.com/@{handle}"}
+
+
 def _meta_api_ads(page_id, token):
     """Meta ads_archive: active ad count + EU reach for a page. Requires a
     Graph API token with Ad Library API access (user opts in via env)."""
@@ -192,8 +218,10 @@ def collect_social():
     for vendor, cfg in SOCIAL_SOURCES.items():
         rec = {"links": {}, "videos_30d": None, "latest_video": None,
                "flagged_titles": [], "channel": "", "ads_api": None,
-               "google_count": None}
-        for key in ("x", "linkedin", "facebook", "meta_ads", "google_ads"):
+               "google_count": None, "tiktok": None,
+               "note": cfg.get("note")}
+        for key in ("x", "linkedin", "facebook", "instagram", "meta_ads",
+                    "google_ads"):
             if cfg.get(key):
                 rec["links"][key] = cfg[key]
         try:
@@ -201,6 +229,11 @@ def collect_social():
                 rec.update(_collect_youtube(cfg["youtube"]))
         except Exception as exc:
             problems.append(f"social — {vendor} youtube: {exc}")
+        if cfg.get("tiktok"):
+            try:
+                rec["tiktok"] = _tiktok_stats(cfg["tiktok"])
+            except Exception as exc:
+                problems.append(f"social — {vendor} tiktok: {exc}")
         if cfg.get("google_ar"):
             try:
                 rec["google_count"] = _google_ads_count(cfg["google_query"],

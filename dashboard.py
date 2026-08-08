@@ -712,8 +712,14 @@ def build_social_dash(social):
         if api:
             facts.append(f"<b>{api['active_ads']}</b> активни Meta реклами · "
                          f"обхват в ЕС ≈ {bg_num(api['eu_reach_sample'])}")
-        flagged = "".join(f"<div class=sub>• {esc(t[:90])}</div>"
-                          for t in so.get("flagged_titles", []))
+        tt = so.get("tiktok")
+        if tt:
+            facts.append(f"TikTok: <b>{bg_num(tt['videos'])}</b> видеа · "
+                         f"{bg_num(tt['followers'])} последователи")
+        note = (f"<div class=sub>{esc(so['note'])}</div>"
+                if so.get("note") else "")
+        flagged = note + "".join(f"<div class=sub>• {esc(t[:90])}</div>"
+                                 for t in so.get("flagged_titles", []))
         latest = (f"<div class=sub>Най-ново: <a href='"
                   f"{esc(lv.get('link', ''))}' target=_blank>"
                   f"{esc((lv.get('title') or '')[:80])}</a> "
