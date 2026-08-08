@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+# Local ad-hoc runs write these to the repo root; CI writes to reports/ instead.
+/digest.html
+/pricing_report.html
+/digest_sample.html
+/pricing_sample.html
+test_*.json
+
+# corrupted binary, kept locally only:
+CC Brandbook extended.pdf

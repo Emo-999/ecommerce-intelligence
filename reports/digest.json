@@ -1,0 +1,629 @@
+[
+  {
+    "source": "Retail Dive",
+    "category": "Industry",
+    "title": "Will people pay more for Under Armour?",
+    "link": "https://www.retaildive.com/news/will-people-pay-more-under-armour-discounts-full-price/827321/",
+    "date": "2026-08-07T16:51:00",
+    "signals": [
+      "ai",
+      "pay",
+      "plan"
+    ]
+  },
+  {
+    "source": "Retail Dive",
+    "category": "Industry",
+    "title": "The Weekly Closeout: Activist comes for Ethan Allen’s board, Rhode delivers for Elf",
+    "link": "https://www.retaildive.com/news/activist-investor-board-shakeup-ethan-allen-rhode-q1-canada-goose-baffin/827281/",
+    "date": "2026-08-07T16:25:00",
+    "signals": [
+      "ai"
+    ]
+  },
+  {
+    "source": "Retail Dive",
+    "category": "Industry",
+    "title": "Ralph Lauren is on a winning streak",
+    "link": "https://www.retaildive.com/news/ralph-lauren-winning-streak-q1-north-america-china/827312/",
+    "date": "2026-08-07T16:18:00",
+    "signals": []
+  },
+  {
+    "source": "Retail Dive",
+    "category": "Industry",
+    "title": "QVC Group exits Chapter 11, CEO steps down",
+    "link": "https://www.retaildive.com/news/qvc-exits-chapter-11-ceo-steps-down/827314/",
+    "date": "2026-08-07T15:45:00",
+    "signals": [
+      "ai"
+    ]
+  },
+  {
+    "source": "Retail Dive",
+    "category": "Industry",
+    "title": "Spirit Halloween parent company to acquire Hot Topic",
+    "link": "https://www.retaildive.com/news/spencer-spirit-holdings-acquire-hot-topic-halloween/827283/",
+    "date": "2026-08-07T15:37:00",
+    "signals": [
+      "ai"
+    ]
+  },
+  {
+    "source": "Practical Ecommerce",
+    "category": "Industry",
+    "title": "Emotion-Led Ads Cut Costs 30%",
+    "link": "https://www.practicalecommerce.com/emotion-led-ads-cut-costs-30",
+    "date": "2026-08-07T13:59:44",
+    "signals": [
+      "cost",
+      "pos"
+    ]
+  },
+  {
+    "source": "Modern Retail",
+    "category": "Industry",
+    "title": "Inside the New York Liberty’s year-round merch machine",
+    "link": "https://www.modernretail.co/marketing/inside-the-new-york-libertys-year-round-merch-machine/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+    "date": "2026-08-07T04:00:00",
+    "signals": []
+  },
+  {
+    "source": "WooCommerce — Releases",
+    "category": "Platform",
+    "title": "Nightly",
+    "link": "https://github.com/woocommerce/woocommerce/releases/tag/nightly",
+    "date": "2026-08-07T01:11:30",
+    "signals": []
+  },
+  {
+    "source": "Modern Retail",
+    "category": "Industry",
+    "title": "Cyclospora fears threaten Sweetgreen’s turnaround plan",
+    "link": "https://www.modernretail.co/operations/cyclospora-fears-threaten-sweetgreens-turnaround-plan/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+    "date": "2026-08-06T22:45:37",
+    "signals": [
+      "ai",
+      "plan"
+    ]
+  },
+  {
+    "source": "Shopify — Developer / API",
+    "category": "Platform",
+    "title": "Standard storefront events and actions now support cart attributes",
+    "link": "https://shopify.dev/changelog/events-and-actions-cart-attributes-support",
+    "date": "2026-08-06T22:00:00",
+    "signals": [
+      "api"
+    ]
+  },
+  {
+    "source": "Shopify — Product & Merchant",
+    "category": "Platform",
+    "title": "Collect WhatsApp marketing consent on Shopify Forms",
+    "link": "https://changelog.shopify.com/posts/collect-whatsapp-marketing-consent-on-shopify-forms",
+    "date": "2026-08-06T20:00:00",
+    "signals": [
+      "ai"
+    ]
+  },
+  {
+    "source": "Digital Commerce 360",
+    "category": "Industry",
+    "title": "How Shopify is approaching agentic AI so far in 2026",
+    "link": "https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/",
+    "date": "2026-08-06T19:18:05",
+    "signals": [
+      "agent",
+      "ai",
+      "pos"
+    ]
+  },
+  {
+    "source": "Digital Commerce 360",
+    "category": "Industry",
+    "title": "Ahold Delhaize USA adds Pear Commerce to connect CPG content to online grocery carts",
+    "link": "https://www.digitalcommerce360.com/2026/08/06/ahold-delhaize-usa-adds-pear-commerce-to-connect-cpg-content-to-online-grocery-carts/",
+    "date": "2026-08-06T19:04:28",
+    "signals": [
+      "ai",
+      "pos"
+    ]
+  },
+  {
+    "source": "Digital Commerce 360",
+    "category": "Industry",
+    "title": "Ecommerce Trends: What online shoppers said will matter in 2026 holiday survey results",
+    "link": "https://www.digitalcommerce360.com/2026/08/06/ecommerce-trends-what-online-shoppers-said-will-matter-in-2026-holiday-survey-results/",
+    "date": "2026-08-06T18:27:56",
+    "signals": [
+      "ai",
+      "pos"
+    ]
+  },
+  {
+    "source": "WooCommerce — Dev blog",
+    "category": "Platform",
+    "title": "August Office Hours: WCUS and WooCommerce Foundations",
+    "link": "https://developer.woocommerce.com/2026/08/06/office-hours-wcus-foundations/",
+    "date": "2026-08-06T17:59:29",
+    "signals": [
+      "pos"
+    ]
+  },
+  {
+    "source": "Vendure — Releases",
+    "category": "Platform",
+    "title": "v3.7.2",
+    "link": "https://github.com/vendurehq/vendure/releases/tag/v3.7.2",
+    "date": "2026-08-06T17:52:20",
+    "signals": [
+      "agent",
+      "ai",
+      "api",
+      "breaking",
+      "llm",
+      "pos",
+      "shipping",
+      "tax"
+    ]
+  },
+  {
+    "source": "Digital Commerce 360",
+    "category": "Industry",
+    "title": "What 24/7 actually costs: the operational anatomy of round-the-clock support for mid-market retailers",
+    "link": "https://www.digitalcommerce360.com/2026/08/06/what-24-7-actually-costs-the-operational-anatomy-of-round-the-clock-support-for-mid-market-retailers/",
+    "date": "2026-08-06T16:50:40",
+    "signals": [
+      "ai",
+      "cost",
+      "pos"
+    ]
+  },
+  {
+    "source": "Retail Dive",
+    "category": "Industry",
+    "title": "Etsy slashes workforce by 12%, laying off 220",
+    "link": "https://www.retaildive.com/news/etsy-slashes-workforce-12-percent-laying-off-220-ai-chatgpt/827193/",
+    "date": "2026-08-06T15:59:00",
+    "signals": [
+      "ai",
+      "cost"
+    ]
+  },
+  {
+    "source": "Retail Dive",
+    "category": "Industry",
+    "title": "Digital Brands Group weighs shareholder cash deal",
+    "link": "https://www.retaildive.com/news/digital-brands-group-weighs-shareholder-cash-deal/827208/",
+    "date": "2026-08-06T15:20:00",
+    "signals": [
+      "pos"
+    ]
+  },
+  {
+    "source": "Retail Dive",
+    "category": "Industry",
+    "title": "Home Depot reshuffles leadership to accelerate tech innovation",
+    "link": "https://www.retaildive.com/news/home-depot-leadership-tech-innovation/827161/",
+    "date": "2026-08-06T14:17:00",
+    "signals": []
+  },
+  {
+    "source": "Saleor — Releases",
+    "category": "Platform",
+    "title": "3.23.26-rc.1",
+    "link": "https://github.com/saleor/saleor/releases/tag/3.23.26-rc.1",
+    "date": "2026-08-06T14:13:28",
+    "signals": []
+  },
+  {
+    "source": "Modern Retail",
+    "category": "Industry",
+    "title": "Big-Box Briefing: This back-to-school season is all about low prices and social trends",
+    "link": "https://www.modernretail.co/operations/big-box-briefing-this-back-to-school-season-is-all-about-low-prices-and-social-trends/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+    "date": "2026-08-06T14:00:00",
+    "signals": [
+      "ai",
+      "price"
+    ]
+  },
+  {
+    "source": "Retail Dive",
+    "category": "Industry",
+    "title": "Claire’s revamps iconic piercing experience",
+    "link": "https://www.retaildive.com/news/claires-revamps-in-store-piercing-experience/826321/",
+    "date": "2026-08-06T13:17:00",
+    "signals": [
+      "ai"
+    ]
+  },
+  {
+    "source": "WooCommerce — Dev blog",
+    "category": "Platform",
+    "title": "Security update for Stripe for WooCommerce",
+    "link": "https://developer.woocommerce.com/2026/08/06/security-update-for-stripe-for-woocommerce/",
+    "date": "2026-08-06T11:45:21",
+    "signals": [
+      "pos"
+    ]
+  },
+  {
+    "source": "Practical Ecommerce",
+    "category": "Industry",
+    "title": "Thinking about Cart Recovery in 2026",
+    "link": "https://www.practicalecommerce.com/thinking-about-cart-recovery-in-2026",
+    "date": "2026-08-06T11:36:02",
+    "signals": [
+      "pos"
+    ]
+  },
+  {
+    "source": "WooCommerce — Dev blog",
+    "category": "Platform",
+    "title": "Introducing Reconciliation Reports for WooPayments",
+    "link": "https://developer.woocommerce.com/2026/08/06/woopayments-reports/",
+    "date": "2026-08-06T10:22:59",
+    "signals": [
+      "ai",
+      "payment",
+      "pos"
+    ]
+  },
+  {
+    "source": "Saleor — Releases",
+    "category": "Platform",
+    "title": "3.23.26-rc.0",
+    "link": "https://github.com/saleor/saleor/releases/tag/3.23.26-rc.0",
+    "date": "2026-08-06T10:19:02",
+    "signals": []
+  },
+  {
+    "source": "Modern Retail",
+    "category": "Industry",
+    "title": "Cole Haan launches luggage, positioning itself as a travel brand",
+    "link": "https://www.modernretail.co/operations/cole-haan-launches-luggage-positioning-itself-as-a-travel-brand/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+    "date": "2026-08-06T04:00:00",
+    "signals": [
+      "pos"
+    ]
+  },
+  {
+    "source": "Modern Retail",
+    "category": "Industry",
+    "title": "OpenAI brings product carousels to ChatGPT ads",
+    "link": "https://www.modernretail.co/marketing/openai-brings-product-carousels-to-chatgpt-ads/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+    "date": "2026-08-06T04:00:00",
+    "signals": [
+      "ai"
+    ]
+  },
+  {
+    "source": "WooCommerce — Dev blog",
+    "category": "Platform",
+    "title": "Security update for WooCommerce Subscriptions",
+    "link": "https://developer.woocommerce.com/2026/08/05/security-update-wc-subscriptions/",
+    "date": "2026-08-05T21:35:07",
+    "signals": [
+      "pos",
+      "subscription"
+    ]
+  },
+  {
+    "source": "Digital Commerce 360",
+    "category": "Industry",
+    "title": "ShipBob adds Claude-integrated AI to in-house fulfillment tech suite",
+    "link": "https://www.digitalcommerce360.com/2026/08/05/shipbob-adds-claude-integrated-ai-to-in-house-fulfillment-tech-suite/",
+    "date": "2026-08-05T20:41:10",
+    "signals": [
+      "agent",
+      "ai",
+      "fulfil",
+      "llm",
+      "pos"
+    ]
+  },
+  {
+    "source": "Digital Commerce 360",
+    "category": "Industry",
+    "title": "Kohl’s debuts Gemini-powered AI assistant in time for back-to-school shopping",
+    "link": "https://www.digitalcommerce360.com/2026/08/05/kohls-google-gemini-ai-assistant-back-to-school-shopping/",
+    "date": "2026-08-05T19:06:59",
+    "signals": [
+      "ai",
+      "pos"
+    ]
+  },
+  {
+    "source": "Digital Commerce 360",
+    "category": "Industry",
+    "title": "Wayfair credits Perigold, AI with driving momentum",
+    "link": "https://www.digitalcommerce360.com/2026/08/05/wayfair-perigold-ai-q2-fy26/",
+    "date": "2026-08-05T18:48:31",
+    "signals": [
+      "ai",
+      "pos"
+    ]
+  },
+  {
+    "source": "Retail Dive",
+    "category": "Industry",
+    "title": "Bed Bath & Beyond Inc. changes corporate name again, relocates headquarters",
+    "link": "https://www.retaildive.com/news/bed-bath-beyond-corporate-name-neighborhood-intelligence-headquarters-second-quarter-earnings/827083/",
+    "date": "2026-08-05T16:24:00",
+    "signals": [
+      "ai"
+    ]
+  },
+  {
+    "source": "Shopify — Developer / API",
+    "category": "Platform",
+    "title": "WebMCP support for Liquid and Hydrogen storefronts",
+    "link": "https://shopify.dev/changelog/webmcp-liquid-hydrogen",
+    "date": "2026-08-05T15:00:00",
+    "signals": [
+      "agent",
+      "ai",
+      "api",
+      "checkout",
+      "pos"
+    ]
+  },
+  {
+    "source": "Practical Ecommerce",
+    "category": "Industry",
+    "title": "New Ecommerce Tools: August 5, 2026",
+    "link": "https://www.practicalecommerce.com/new-ecommerce-tools-august-5-2026",
+    "date": "2026-08-05T12:30:30",
+    "signals": [
+      "agent",
+      "ai",
+      "payment",
+      "pos"
+    ]
+  },
+  {
+    "source": "WooCommerce — Dev blog",
+    "category": "Platform",
+    "title": "What’s the value of DataViews and who is it for?",
+    "link": "https://developer.woocommerce.com/2026/08/05/the-value-of-dataviews/",
+    "date": "2026-08-05T09:17:10",
+    "signals": [
+      "pos"
+    ]
+  },
+  {
+    "source": "Saleor — Releases",
+    "category": "Platform",
+    "title": "3.23.25",
+    "link": "https://github.com/saleor/saleor/releases/tag/3.23.25",
+    "date": "2026-08-05T07:07:37",
+    "signals": []
+  },
+  {
+    "source": "Saleor — Releases",
+    "category": "Platform",
+    "title": "3.22.65",
+    "link": "https://github.com/saleor/saleor/releases/tag/3.22.65",
+    "date": "2026-08-05T07:07:20",
+    "signals": []
+  },
+  {
+    "source": "Saleor — Releases",
+    "category": "Platform",
+    "title": "3.21.69",
+    "link": "https://github.com/saleor/saleor/releases/tag/3.21.69",
+    "date": "2026-08-05T07:07:04",
+    "signals": []
+  },
+  {
+    "source": "Modern Retail",
+    "category": "Industry",
+    "title": "Gorilla Commerce built a 9-figure business on Amazon. Now, it’s launching in Walmart stores",
+    "link": "https://www.modernretail.co/operations/gorilla-commerce-built-a-9-figure-business-on-amazon-now-its-launching-in-walmart-stores/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+    "date": "2026-08-05T04:00:00",
+    "signals": []
+  },
+  {
+    "source": "Modern Retail",
+    "category": "Industry",
+    "title": "Hims & Hers says its first-ever gummy prescription is driving a high adherence rate",
+    "link": "https://www.modernretail.co/operations/hims-hers-says-its-first-ever-gummy-prescription-is-driving-a-high-adherence-rate/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+    "date": "2026-08-05T04:00:00",
+    "signals": [
+      "ai"
+    ]
+  },
+  {
+    "source": "Digital Commerce 360",
+    "category": "Industry",
+    "title": "Boot Barn ecommerce sales rise in Q1 via omnichannel offerings",
+    "link": "https://www.digitalcommerce360.com/2026/08/04/boot-barn-ecommerce-sales-q1-fy27/",
+    "date": "2026-08-04T21:18:37",
+    "signals": [
+      "ai",
+      "pos"
+    ]
+  },
+  {
+    "source": "Digital Commerce 360",
+    "category": "Industry",
+    "title": "Povison benefits from Prime Day effect, plans ahead for Cyber 5",
+    "link": "https://www.digitalcommerce360.com/2026/08/04/povison-prime-day-holidays-cyber-5/",
+    "date": "2026-08-04T20:19:15",
+    "signals": [
+      "ai",
+      "plan",
+      "pos"
+    ]
+  },
+  {
+    "source": "Digital Commerce 360",
+    "category": "Industry",
+    "title": "ADI completes spinoff from Resideo",
+    "link": "https://www.digitalcommerce360.com/2026/08/04/adi-completes-spinoff-from-resideo/",
+    "date": "2026-08-04T20:17:59",
+    "signals": [
+      "plan",
+      "pos"
+    ]
+  },
+  {
+    "source": "Modern Retail",
+    "category": "Industry",
+    "title": "Kroger’s AI shopping assistant has ads at launch",
+    "link": "https://www.modernretail.co/technology/krogers-ai-shopping-assistant-has-ads-at-launch/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+    "date": "2026-08-04T19:58:34",
+    "signals": [
+      "ai"
+    ]
+  },
+  {
+    "source": "Shopify — Product & Merchant",
+    "category": "Platform",
+    "title": "Microsoft Advertising now available in Campaign Autopilot",
+    "link": "https://changelog.shopify.com/posts/microsoft-advertising-now-available-in-campaign-autopilot",
+    "date": "2026-08-04T17:00:00",
+    "signals": [
+      "ai"
+    ]
+  },
+  {
+    "source": "WooCommerce — Dev blog",
+    "category": "Platform",
+    "title": "WooCommerce 11.0 Release Notes",
+    "link": "https://developer.woocommerce.com/2026/08/04/woocommerce-11-0/",
+    "date": "2026-08-04T16:54:05",
+    "signals": [
+      "checkout",
+      "pos"
+    ]
+  },
+  {
+    "source": "WooCommerce — Releases",
+    "category": "Platform",
+    "title": "11.0.0",
+    "link": "https://github.com/woocommerce/woocommerce/releases/tag/11.0.0",
+    "date": "2026-08-04T16:33:05",
+    "signals": []
+  },
+  {
+    "source": "Saleor — Releases",
+    "category": "Platform",
+    "title": "3.23.24",
+    "link": "https://github.com/saleor/saleor/releases/tag/3.23.24",
+    "date": "2026-08-04T16:22:15",
+    "signals": [
+      "ai"
+    ]
+  },
+  {
+    "source": "Saleor — Releases",
+    "category": "Platform",
+    "title": "3.22.64",
+    "link": "https://github.com/saleor/saleor/releases/tag/3.22.64",
+    "date": "2026-08-04T16:20:24",
+    "signals": [
+      "ai"
+    ]
+  },
+  {
+    "source": "Saleor — Releases",
+    "category": "Platform",
+    "title": "3.21.68",
+    "link": "https://github.com/saleor/saleor/releases/tag/3.21.68",
+    "date": "2026-08-04T16:19:45",
+    "signals": [
+      "ai"
+    ]
+  },
+  {
+    "source": "Modern Retail",
+    "category": "Industry",
+    "title": "Brands Briefing: Why apparel IPOs are creeping back up",
+    "link": "https://www.modernretail.co/operations/brands-briefing-why-apparel-ipos-are-creeping-back-up/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+    "date": "2026-08-04T14:00:00",
+    "signals": [
+      "pos"
+    ]
+  },
+  {
+    "source": "Practical Ecommerce",
+    "category": "Industry",
+    "title": "What to Know about Listicles",
+    "link": "https://www.practicalecommerce.com/what-to-know-about-listicles",
+    "date": "2026-08-04T09:55:35",
+    "signals": [
+      "ai",
+      "pos"
+    ]
+  },
+  {
+    "source": "Modern Retail",
+    "category": "Industry",
+    "title": "Modern Retail+ Research: The 2026 guide to holiday marketing strategies, including A-Frame Brands, Mastercard and Ritual",
+    "link": "https://www.modernretail.co/marketing/modern-retail-research-the-2026-guide-to-holiday-marketing-strategies-including-a-frame-brands-mastercard-and-ritual/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+    "date": "2026-08-04T04:00:00",
+    "signals": [
+      "ai"
+    ]
+  },
+  {
+    "source": "Shopify — Developer / API",
+    "category": "Platform",
+    "title": "Oxygen is now available on development stores",
+    "link": "https://shopify.dev/changelog/oxygen-is-now-available-on-development-stores",
+    "date": "2026-08-03T16:00:00",
+    "signals": [
+      "ai",
+      "headless",
+      "plan"
+    ]
+  },
+  {
+    "source": "Shopify — Developer / API",
+    "category": "Platform",
+    "title": "The `orderCreate` mutation now supports multiple tracking numbers for each fulfillment",
+    "link": "https://shopify.dev/changelog/order-create-fulfillment-tracking-numbers",
+    "date": "2026-08-03T13:00:00",
+    "signals": [
+      "ai",
+      "api",
+      "fulfil",
+      "graphql",
+      "llm"
+    ]
+  },
+  {
+    "source": "Practical Ecommerce",
+    "category": "Industry",
+    "title": "5 Content Marketing Ideas for September 2026",
+    "link": "https://www.practicalecommerce.com/5-content-marketing-ideas-for-september",
+    "date": "2026-08-03T09:07:41",
+    "signals": [
+      "pos"
+    ]
+  },
+  {
+    "source": "Shopify — Developer / API",
+    "category": "Platform",
+    "title": "Updated Built for Shopify requirements for Fulfillment services apps",
+    "link": "https://shopify.dev/changelog/updated-built-for-shopify-requirements-for-fulfillment-services-apps",
+    "date": "2026-08-01T16:00:00",
+    "signals": [
+      "ai",
+      "fulfil",
+      "llm"
+    ]
+  },
+  {
+    "source": "WooCommerce — Dev blog",
+    "category": "Platform",
+    "title": "We’re headed to Phoenix! WCUS ’26 is on.",
+    "link": "https://developer.woocommerce.com/2026/07/31/wcus-2026/",
+    "date": "2026-07-31T20:23:22",
+    "signals": [
+      "pos"
+    ]
+  }
+]

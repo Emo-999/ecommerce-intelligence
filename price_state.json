@@ -1,0 +1,312 @@
+{
+  "https://www.bigcommerce.com/pricing/": {
+    "name": "BigCommerce",
+    "prices": [
+      "$0",
+      "$1",
+      "$2",
+      "$29",
+      "$30",
+      "$39",
+      "$50",
+      "$79",
+      "$100",
+      "$105",
+      "$299",
+      "$399",
+      "$0.29",
+      "$1,499",
+      "$33,333"
+    ],
+    "checked": "2026-08-08T15:32:15"
+  },
+  "https://www.ecwid.com/pricing": {
+    "name": "Ecwid",
+    "prices": [
+      "0€",
+      "450€",
+      "1399€",
+      "1680€",
+      "2499€",
+      "2999€",
+      "6399€",
+      "7799€"
+    ],
+    "checked": "2026-08-08T15:32:15"
+  },
+  "https://www.shopify.com/bg/pricing": {
+    "name": "Shopify",
+    "prices": [
+      "0€",
+      "1€",
+      "19€",
+      "27€",
+      "56€",
+      "74€",
+      "79€",
+      "99€",
+      "289€",
+      "384€",
+      "€1,7",
+      "€1,8",
+      "€2,7",
+      "€2,8",
+      "0,25€",
+      "2100€",
+      "4500€",
+      "6500€",
+      "8500€",
+      "12000€"
+    ],
+    "checked": "2026-08-08T15:32:15"
+  },
+  "https://www.squarespace.com/pricing": {
+    "name": "Squarespace",
+    "prices": [
+      "€14",
+      "€20",
+      "€30",
+      "€108",
+      "€168",
+      "€252"
+    ],
+    "checked": "2026-08-08T15:32:15"
+  },
+  "https://www.shift4shop.com/pricing.htm": {
+    "name": "Shift4Shop",
+    "prices": [
+      "$41",
+      "$200",
+      "$229",
+      "$299",
+      "$2,000"
+    ],
+    "checked": "2026-08-08T15:32:15"
+  },
+  "https://www.wix.com/plans": {
+    "name": "Wix eCommerce",
+    "prices": [
+      "$0",
+      "$17",
+      "$29",
+      "$39",
+      "$159"
+    ],
+    "checked": "2026-08-08T15:32:15"
+  },
+  "_plans": {
+    "vendors": {
+      "CloudCart": {
+        "url": "https://cloudcart.com/pricing",
+        "plans": [
+          {
+            "name": "Baby Pack",
+            "monthly": 19.0,
+            "annual": 14.0,
+            "currency": "EUR",
+            "note": "0% transaction fee; annual price is a first-year promo"
+          },
+          {
+            "name": "Starter Pack",
+            "monthly": 39.0,
+            "annual": 33.0,
+            "currency": "EUR",
+            "note": "0% transaction fee; annual price is a first-year promo"
+          },
+          {
+            "name": "CC Pro",
+            "monthly": 99.0,
+            "annual": 83.0,
+            "currency": "EUR",
+            "note": "0% transaction fee; annual price is a first-year promo"
+          },
+          {
+            "name": "CC Master",
+            "monthly": 299.0,
+            "annual": 249.0,
+            "currency": "EUR",
+            "note": "0% transaction fee; annual price is a first-year promo"
+          }
+        ]
+      },
+      "Shopify": {
+        "url": "https://www.shopify.com/bg/pricing",
+        "plans": [
+          {
+            "name": "Basic",
+            "monthly": 27.0,
+            "annual": 19.0,
+            "currency": "EUR",
+            "note": ""
+          },
+          {
+            "name": "Grow",
+            "monthly": 74.0,
+            "annual": 56.0,
+            "currency": "EUR",
+            "note": ""
+          },
+          {
+            "name": "Advanced",
+            "monthly": 384.0,
+            "annual": 289.0,
+            "currency": "EUR",
+            "note": ""
+          },
+          {
+            "name": "Plus",
+            "monthly": 2100.0,
+            "annual": null,
+            "currency": "EUR",
+            "note": "from-price; no annual option"
+          }
+        ]
+      },
+      "BigCommerce": {
+        "url": "https://www.bigcommerce.com/pricing/",
+        "plans": [
+          {
+            "name": "Core",
+            "monthly": 39.0,
+            "annual": 29.0,
+            "currency": "USD",
+            "note": ""
+          },
+          {
+            "name": "Growth",
+            "monthly": 105.0,
+            "annual": 79.0,
+            "currency": "USD",
+            "note": ""
+          },
+          {
+            "name": "Scale",
+            "monthly": 399.0,
+            "annual": 299.0,
+            "currency": "USD",
+            "note": ""
+          },
+          {
+            "name": "Performance",
+            "monthly": null,
+            "annual": null,
+            "currency": "USD",
+            "note": "custom; from $1,499/mo annually"
+          }
+        ]
+      },
+      "Wix": {
+        "url": "https://www.wix.com/plans",
+        "plans": [
+          {
+            "name": "Light",
+            "monthly": null,
+            "annual": 17.0,
+            "currency": "USD",
+            "note": "yearly billing only (paid upfront)"
+          },
+          {
+            "name": "Core",
+            "monthly": null,
+            "annual": 29.0,
+            "currency": "USD",
+            "note": "yearly billing only (paid upfront)"
+          },
+          {
+            "name": "Business",
+            "monthly": null,
+            "annual": 39.0,
+            "currency": "USD",
+            "note": "yearly billing only (paid upfront)"
+          },
+          {
+            "name": "Business Elite",
+            "monthly": null,
+            "annual": 159.0,
+            "currency": "USD",
+            "note": "yearly billing only (paid upfront)"
+          }
+        ]
+      },
+      "Squarespace": {
+        "url": "https://www.squarespace.com/pricing",
+        "plans": [
+          {
+            "name": "Basic",
+            "monthly": 14.0,
+            "annual": 9.0,
+            "currency": "EUR",
+            "note": ""
+          },
+          {
+            "name": "Core",
+            "monthly": 20.0,
+            "annual": 14.0,
+            "currency": "EUR",
+            "note": ""
+          },
+          {
+            "name": "Advanced",
+            "monthly": 30.0,
+            "annual": 21.0,
+            "currency": "EUR",
+            "note": ""
+          },
+          {
+            "name": "Plus",
+            "monthly": 65.0,
+            "annual": 49.0,
+            "currency": "USD",
+            "note": "USD only (no EUR offer)"
+          }
+        ]
+      },
+      "Ecwid": {
+        "url": "https://www.ecwid.com/pricing",
+        "plans": [
+          {
+            "name": "Starter",
+            "monthly": 5.0,
+            "annual": 5.0,
+            "currency": "EUR",
+            "note": ""
+          },
+          {
+            "name": "Venture",
+            "monthly": 35.0,
+            "annual": 29.0,
+            "currency": "EUR",
+            "note": ""
+          },
+          {
+            "name": "Business",
+            "monthly": 65.0,
+            "annual": 49.0,
+            "currency": "EUR",
+            "note": ""
+          },
+          {
+            "name": "Unlimited",
+            "monthly": 149.0,
+            "annual": 119.0,
+            "currency": "EUR",
+            "note": ""
+          }
+        ]
+      },
+      "Shift4Shop": {
+        "url": "https://www.shift4shop.com/pricing.htm",
+        "plans": [
+          {
+            "name": "End-to-End eCommerce",
+            "monthly": 41.0,
+            "annual": null,
+            "currency": "USD",
+            "note": "single plan; US storefronts get it free with Shift4 Payments"
+          }
+        ]
+      }
+    },
+    "checked": "2026-08-08T15:32:22"
+  }
+}

@@ -1,0 +1,6 @@
+feedparser>=6.0
+requests>=2.31
+beautifulsoup4>=4.12
+# Optional — only needed if you enable headless fetch for JS-rendered pricing pages:
+# playwright>=1.44   (then run: playwright install chromium)
+tzdata>=2024.1        # Europe/Sofia display times on Windows/CI

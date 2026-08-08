@@ -1,0 +1,254 @@
+<!doctype html><html lang="bg"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Социални и реклами</title><script>(function(){try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script><style>
+@font-face{font-family:"Montserrat";
+src:url("fonts/montserrat-var.woff2") format("woff2-variations");
+font-weight:100 900;font-style:normal;font-display:swap}
+:root{
+--bg:#F4F5F9;--fg:#24252D;--card:#FFFFFF;--muted:#585F71;--mid:#8380AB;
+--border:#DBDEEA;--border-1:#EBEDF4;
+--primary:#7344BB;--primary-hover:#9D67F4;--on-primary:#FFFFFF;
+--primary-soft:rgba(115,68,187,.07);
+--side-bg:#EBEDF4;--side-fg:#716E94;--side-border:#C5C9DC;
+--ok-bg:#D5F6E3;--ok-fg:#06281E;--warn-bg:#FEF9C3;--warn-fg:#422006;
+--err-bg:#FFE0E0;--err-fg:#490606;--destructive:#E91A19;
+--input:#FFFFFF;--ghost-fg:#6D758A;--ghost-hover:#0000000D;
+--focus:#9D67F4;
+--chart-ours:#7344BB;--chart-comp:#2B7FFF;
+--r-xs:2px;--r-sm:4px;--r-md:6px;--r-lg:8px;--r-xl:12px;
+--row-h:50px;--row-pad-y:9px;
+--dur-fast:100ms;--dur-base:160ms;--dur-slow:240ms;
+--ease:cubic-bezier(.19,.91,.38,1)}
+[data-theme="dark"]{
+--bg:#0A0A14;--fg:#F7F8F8;--card:#1A1A2B;--muted:#8C93A4;--mid:#AEB1CD;
+--border:#34314E;--border-1:#1A1A2B;
+--primary:#AE82FF;--primary-hover:#C9B1FF;--on-primary:#1A1A2B;
+--primary-soft:rgba(174,130,255,.10);
+--side-bg:#1A1A2B;--side-fg:#C5C9DC;--side-border:#34314E;
+--ok-bg:#7BDAAD;--ok-fg:#06281E;--warn-bg:#FEF08A;--warn-fg:#422006;
+--err-bg:#FFA09F;--err-fg:#490606;--destructive:#FF6867;
+--input:#FFFFFF0D;--ghost-fg:#DBDEEA;--ghost-hover:#FFFFFF1A;
+--focus:#C9B1FF;
+--chart-ours:#AE82FF;--chart-comp:#1CCFB9}
+*{box-sizing:border-box}
+html{font-family:"Montserrat",system-ui,sans-serif;font-size:15px;
+line-height:23px;color:var(--fg);background:var(--bg);
+font-variant-numeric:tabular-nums lining-nums}
+body{margin:0;background:var(--bg);color:var(--fg);font-size:15px;
+line-height:23px}
+:is(td,th,.sku,.mono,input,code,.num){font-variant-ligatures:none;
+font-feature-settings:"liga" 0,"calt" 0,"dlig" 0}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+a{color:var(--primary);text-decoration:none}
+a:hover{color:var(--primary-hover)}
+h1,h2,h3,h4,h5{margin:0;color:var(--fg)}
+h1{font-size:28px;line-height:36px;font-weight:600}
+h3{font-size:19px;line-height:27px;font-weight:600}
+h4{font-size:15px;line-height:22px;font-weight:600}
+/* ---------- обикновена рамка (под-справки, писма) ---------- */
+.wrap{max-width:900px;margin:0 auto;padding:24px 16px 60px}
+/* ---------- админ рамка: лента < фон < карта ---------- */
+.app{display:flex;min-height:100vh}
+.side{flex:0 0 200px;background:var(--side-bg);
+border-right:1px solid var(--side-border);padding:16px 0;
+position:sticky;top:0;height:100vh;overflow-y:auto}
+.side .mark{display:block;padding:0 16px 14px;font-weight:700;font-size:17px;
+color:var(--fg);border-bottom:1px solid var(--side-border);margin-bottom:10px}
+.side .tagl{display:block;font-size:12px;line-height:17px;font-weight:600;
+letter-spacing:.44px;color:var(--side-fg);margin-top:2px}
+.sitem{display:block;padding:9px 16px;font-size:14px;line-height:20px;
+font-weight:600;color:var(--side-fg);
+transition:background var(--dur-fast) var(--ease),color var(--dur-fast) var(--ease)}
+.sitem:hover{background:var(--ghost-hover);color:var(--fg)}
+.sitem.on{background:var(--primary-soft);color:var(--primary)}
+.side .sfoot{padding:12px 16px;font-size:11px;line-height:16px;
+color:var(--side-fg);border-top:1px solid var(--side-border);margin-top:12px}
+.themebtn{display:inline-flex;align-items:center;gap:6px;margin:10px 16px 0;
+padding:6px 10px;background:transparent;border:1px solid var(--side-border);
+border-radius:var(--r-md);color:var(--side-fg);font:inherit;font-size:12px;
+font-weight:600;cursor:pointer}
+.themebtn:hover{background:var(--ghost-hover)}
+.themebtn svg{width:13px;height:13px}
+.main{flex:1;min-width:0;max-width:1280px;padding:24px 24px 80px}
+.page-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;
+margin-bottom:16px}
+.page-head h1{font-size:28px;line-height:36px;font-weight:600}
+.page-head .meta{margin:0}
+@media(max-width:800px){.app{display:block}
+.side{position:static;height:auto;width:100%;border-right:none;
+border-bottom:1px solid var(--side-border);display:flex;flex-wrap:wrap;
+align-items:center;gap:2px;padding:8px 12px}
+.side .mark{border:none;margin:0;padding:0 12px 0 0}
+.side .tagl{display:none}.side .sfoot{display:none}.themebtn{margin:0}
+.sitem{border-radius:var(--r-md);padding:5px 10px}
+.main{padding:16px 12px 60px}
+body{font-size:16px}}
+/* ---------- типография на секции ---------- */
+.meta{color:var(--muted);font-size:13.5px;line-height:20px;margin-bottom:16px}
+h2.sec,h2{font-size:18px;line-height:26px;font-weight:600;color:var(--fg);
+margin:40px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+section{scroll-margin-top:16px}
+/* ---------- карти ---------- */
+.card{background:var(--card);border:1px solid var(--border);
+border-radius:var(--r-lg);padding:12px 16px;margin-bottom:8px}
+.card a{font-weight:600}
+.row{display:flex;justify-content:space-between;gap:12px;margin-top:6px;
+font-size:13.5px;line-height:20px;color:var(--muted)}
+.src{color:var(--muted);font-weight:600}
+.sig{display:inline-block;background:var(--primary-soft);color:var(--primary);
+border-radius:var(--r-xs);padding:2px 8px;font-size:12.5px;line-height:18px;
+font-weight:600;margin:6px 5px 0 0}
+.empty{color:var(--muted);font-style:italic;font-size:14px}
+.warn{margin-top:24px;font-size:13.5px;color:var(--muted);
+border-top:1px solid var(--border);padding-top:12px}
+.warn b{color:var(--err-fg);background:var(--err-bg);padding:1px 6px;
+border-radius:var(--r-xs)}
+.name{font-weight:600;color:var(--fg)}
+.chg{font-weight:600;color:var(--warn-fg);background:var(--warn-bg);
+padding:1px 6px;border-radius:var(--r-xs)}
+.sub{font-size:13.5px;line-height:20px;color:var(--muted);margin-top:4px}
+.sub a{font-weight:400}
+/* ---------- значки ---------- */
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:13px;
+line-height:19px;font-weight:600;padding:3px 10px;border-radius:var(--r-sm);
+white-space:nowrap}
+.badge .dt{width:6px;height:6px;border-radius:50%;background:currentColor}
+.badge-ok{background:var(--ok-bg);color:var(--ok-fg)}
+.badge-warn{background:var(--warn-bg);color:var(--warn-fg)}
+.badge-err{background:var(--err-bg);color:var(--err-fg)}
+.badge-na{background:transparent;color:var(--muted);
+border:1px solid var(--border)}
+.pill{font-size:12px;font-weight:600;padding:2px 9px;
+border-radius:var(--r-sm);border:1px solid var(--border);color:var(--muted);
+float:right}
+.pill-hot{border-color:transparent;color:var(--err-fg);background:var(--err-bg)}
+/* ---------- KPI ---------- */
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:8px;margin-bottom:12px}
+.tile{background:var(--card);border:1px solid var(--border);
+border-radius:var(--r-lg);padding:12px 16px}
+.tile .n{font-size:32px;line-height:38px;font-weight:600;color:var(--fg)}
+.tile .n.hot{color:var(--destructive)}
+.tile .l{font-size:12px;line-height:17px;font-weight:600;
+letter-spacing:.44px;color:var(--muted);margin-top:2px}
+/* ---------- бутони ---------- */
+.btn{display:inline-block;background:var(--primary);color:var(--on-primary);
+font-weight:600;font-size:14px;height:38px;line-height:38px;padding:0 18px;
+border-radius:var(--r-md);text-decoration:none;margin:6px 8px 0 0;
+transition:background var(--dur-fast) var(--ease)}
+.btn:hover{background:var(--primary-hover);color:var(--on-primary)}
+.btn.ghost{background:transparent;color:var(--primary);
+border:1px solid var(--border);line-height:36px}
+.btn.ghost:hover{background:var(--ghost-hover)}
+/* ---------- таблици ---------- */
+.tablewrap{overflow-x:auto;border:1px solid var(--border);
+border-radius:var(--r-lg);background:var(--card)}
+table.dense,.matrix{width:100%;border-collapse:collapse;font-size:14px;
+line-height:21px;background:var(--card)}
+.matrix{min-width:640px}
+table.dense th,.matrix th{text-align:left;font-size:12px;line-height:17px;
+font-weight:600;letter-spacing:.33px;color:var(--muted);
+padding:8px 12px;border-bottom:1px solid var(--border);white-space:nowrap}
+table.dense td,.matrix td{padding:var(--row-pad-y) 12px;
+border-bottom:1px solid var(--border-1);vertical-align:middle;
+height:var(--row-h)}
+table.dense tbody tr:last-child td,.matrix tbody tr:last-child td{border-bottom:none}
+table.dense tbody tr:hover td{background:var(--bg);
+transition:background var(--dur-fast) var(--ease)}
+td.num,.num{text-align:right;white-space:nowrap}
+table.dense th.num{text-align:right;width:1%;white-space:nowrap;
+padding-right:24px}
+table.dense td.num{width:1%;padding-right:24px}
+.matrix .vname a,.dense .vname a{color:var(--fg);font-weight:600}
+.matrix tr.ours td,.dense tr.ours td{background:var(--primary-soft)}
+.matrix .na{color:var(--mid)}
+.pname{font-weight:600;color:var(--fg);font-size:13px;line-height:18px}
+.pprice{margin-top:1px}
+.approx{color:var(--muted);font-size:12.5px}
+.delta{display:inline-block;font-size:12.5px;line-height:18px;font-weight:600;
+border-radius:var(--r-sm);padding:1px 6px;margin-top:3px}
+.delta.up{background:var(--ok-bg);color:var(--ok-fg)}
+.delta.down{background:var(--err-bg);color:var(--err-fg)}
+.basis{font-size:13px;line-height:19px;color:var(--muted);margin:10px 2px 0}
+/* ---------- ленти (сравнение на величини) ---------- */
+.bars{margin-top:4px}
+.barrow{display:flex;align-items:center;gap:12px;padding:3px 0}
+.barlabel{flex:0 0 230px;font-size:14px;font-weight:600;color:var(--fg);
+text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bartrack{flex:1;display:flex;align-items:center;gap:8px}
+.bar{height:14px;border-radius:0 var(--r-sm) var(--r-sm) 0;
+background:var(--chart-comp);min-width:3px}
+.bar.ours{background:var(--chart-ours)}
+.barval{font-size:14px;color:var(--fg);white-space:nowrap}
+@media(max-width:640px){.barlabel{flex-basis:120px}}
+/* ---------- измерител в клетка ---------- */
+.meter{display:inline-block;width:64px;height:6px;background:var(--bg);
+border:1px solid var(--border);border-radius:3px;vertical-align:middle;
+margin-right:6px}
+.meter i{display:block;height:100%;background:var(--destructive);
+border-radius:2px;min-width:2px}
+.cellmain{color:var(--fg)}
+.cellmain b{font-weight:600}
+.okmuted{color:var(--muted)}
+.linkrow a{display:inline-block;font-size:13px;font-weight:600;
+margin-right:8px}
+.foot{margin-top:40px;font-size:12px;line-height:17px;color:var(--muted);
+border-top:1px solid var(--border);padding-top:12px}
+.brand{display:flex;align-items:baseline;gap:10px;margin-bottom:16px;
+border-bottom:1px solid var(--border);padding-bottom:12px}
+.brand .mark{font-weight:700;font-size:17px;color:var(--fg)}
+.brand .tag{font-size:12px;letter-spacing:.44px;color:var(--muted);
+font-weight:600}
+input#filterbox{width:100%;height:40px;background:var(--input);
+border:1px solid var(--border);border-radius:var(--r-md);padding:0 12px;
+font:inherit;color:var(--fg);margin-bottom:12px}
+/* ---------- филтърни чипове (избраният е едно от шестте маркови места) --- */
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.chip{font:inherit;font-size:14px;line-height:20px;font-weight:600;
+padding:6px 14px;background:var(--card);border:1px solid var(--border);
+border-radius:var(--r-md);color:var(--muted);cursor:pointer;
+transition:background var(--dur-fast) var(--ease),color var(--dur-fast) var(--ease)}
+.chip:hover{background:var(--ghost-hover);color:var(--fg)}
+.chip.on{background:var(--primary-soft);color:var(--primary);
+border-color:transparent}
+.newmark{display:inline-block;font-size:12px;line-height:17px;font-weight:600;
+letter-spacing:.44px;color:var(--ok-fg);background:var(--ok-bg);
+border-radius:var(--r-xs);padding:1px 6px;margin-right:6px}
+.score{float:right;font-size:12.5px;color:var(--mid)}
+/* ---------- матрица на възможностите: бърз преглед + детайл при клик --- */
+tr.frow{cursor:pointer}
+tr.frow:hover td{background:var(--bg)}
+tr.frow.open td{background:var(--primary-soft)}
+tr.frow .fname{font-weight:600;color:var(--fg)}
+tr.frow .fhint{font-size:12.5px;color:var(--mid);font-weight:400}
+tr.frow.open .fhint{color:var(--primary)}
+tr.fdetail>td{background:var(--bg);padding:12px}
+.fdgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+gap:8px}
+.fd{background:var(--card);border:1px solid var(--border);
+border-radius:var(--r-md);padding:10px 12px}
+.fd.ours{background:var(--primary-soft)}
+.fdv{display:flex;justify-content:space-between;align-items:center;gap:8px;
+font-weight:600;color:var(--fg)}
+.fdnote{font-size:13.5px;line-height:20px;color:var(--muted);margin-top:6px}
+.fd .sub{margin-top:6px}
+</style><body><div class=app><aside class=side><span class=mark>CloudCart<span class=tagl>Конкурентно разузнаване</span></span><a class='sitem' href='index.html'>Табло</a><a class='sitem' href='pricing.html'>Цени</a><a class='sitem' href='features.html'>Функции</a><a class='sitem' href='availability.html'>Наличност</a><a class='sitem' href='activity.html'>Пазарна активност</a><a class='sitem on' href='social.html'>Социални и реклами</a><a class='sitem' href='sources.html'>Източници</a><button class=themebtn id=themebtn type=button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg><span class=tlab>Тъмна тема</span></button><div class=sfoot>ecommerce-intelligence<br>вътрешна употреба</div></aside><main class=main><div class=page-head><h1>Социални и реклами</h1><div class=meta>08.08.2026 15:32 ч.</div></div><div class=tiles><div class=tile><div class='n'>7</div><div class=l>следени платформи</div></div><div class=tile><div class='n'>4</div><div class=l>с видео този месец</div></div><div class=tile><div class='n'>35</div><div class=l>видеа за 30 дни, общо</div></div></div><div class=card><span class=name>CloudCart</span><div class=cellmain style='margin-top:4px'><b>0</b> видеа за 30 дни</div><div class=sub>Най-ново: <a href='https://www.youtube.com/watch?v=LNmbohPhgic' target=_blank>Technology and Innovation Emerging from the Pandemic with Evgeni Yordanov - CDO </a> (Nov 26)</div><div class='sub linkrow' style='margin-top:6px'><a href='https://www.youtube.com/channel/UCZpAaKJ0AgLf6jU3Cs1-WIQ' target=_blank>youtube</a><a href='https://x.com/cloudcart' target=_blank>x</a><a href='https://www.linkedin.com/company/cloudcart' target=_blank>linkedin</a><a href='https://www.facebook.com/cloudcart' target=_blank>facebook</a></div></div><div class=card><span class=name>Shopify</span><div class=cellmain style='margin-top:4px'><b>3</b> видеа за 30 дни</div><div class=sub>Най-ново: <a href='https://www.youtube.com/watch?v=KsujQDvKdHk' target=_blank>What is Shop? | Shopping designed around you</a> (Aug 07)</div><div class='sub linkrow' style='margin-top:6px'><a href='https://www.youtube.com/channel/UCIv38OrggTu3vNkCAo96-CQ' target=_blank>youtube</a><a href='https://x.com/shopify' target=_blank>x</a><a href='https://www.linkedin.com/company/shopify' target=_blank>linkedin</a><a href='https://www.facebook.com/shopify' target=_blank>facebook</a><a href='https://www.facebook.com/ads/library/?active_status=all&amp;ad_type=all&amp;country=ALL&amp;view_all_page_id=100064482022452' target=_blank>meta ads</a><a href='https://adstransparency.google.com/advertiser/AR01625195283841286145?region=anywhere' target=_blank>google ads</a></div></div><div class=card><span class=name>BigCommerce</span><div class=cellmain style='margin-top:4px'><b>15</b> видеа за 30 дни</div><div class=sub>Най-ново: <a href='https://www.youtube.com/watch?v=pzWoU2i4UbU' target=_blank>Platform Hunger Games: Open Platforms, Open Opinions</a> (Aug 04)</div><div class=sub>• Commerce Live Teaser: How to Get an AI Growth Mindset</div><div class=sub>• The Middle Miles: The Hidden Future of B2B Commerce</div><div class=sub>• AI Transformation: You&#x27;re Not Early, You&#x27;re Late.</div><div class=sub>• AI Bots Are Weird: Commerce is Weirder</div><div class=sub>• AI, Data, and the End of Boring Commerce</div><div class='sub linkrow' style='margin-top:6px'><a href='https://www.youtube.com/channel/UCgIZY6oj1XHT_FGSQtvLSLg' target=_blank>youtube</a><a href='https://x.com/BigCommerce' target=_blank>x</a><a href='https://www.linkedin.com/company/bigcommerce' target=_blank>linkedin</a><a href='https://www.facebook.com/BigCommerce' target=_blank>facebook</a><a href='https://www.facebook.com/ads/library/?active_status=all&amp;ad_type=all&amp;country=ALL&amp;view_all_page_id=100064631536174' target=_blank>meta ads</a><a href='https://adstransparency.google.com/?region=anywhere&amp;domain=bigcommerce.com' target=_blank>google ads</a></div></div><div class=card><span class=name>Wix</span><div class=cellmain style='margin-top:4px'><b>2</b> видеа за 30 дни</div><div class=sub>Най-ново: <a href='https://www.youtube.com/watch?v=27wvZMlkCsE' target=_blank>Turn your idea into an online business | Wix eCommerce</a> (Jul 28)</div><div class='sub linkrow' style='margin-top:6px'><a href='https://www.youtube.com/channel/UCx96GiJ3qYw2sHccPp5dY_g' target=_blank>youtube</a><a href='https://x.com/wix' target=_blank>x</a><a href='https://www.linkedin.com/company/wix-com' target=_blank>linkedin</a><a href='https://www.facebook.com/wix' target=_blank>facebook</a><a href='https://www.facebook.com/ads/library/?active_status=all&amp;ad_type=all&amp;country=ALL&amp;view_all_page_id=100064617644523' target=_blank>meta ads</a><a href='https://adstransparency.google.com/?region=anywhere&amp;domain=wix.com' target=_blank>google ads</a></div></div><div class=card><span class=name>Squarespace</span><div class=cellmain style='margin-top:4px'><b>15</b> видеа за 30 дни</div><div class=sub>Най-ново: <a href='https://www.youtube.com/shorts/Fk02S55CdJ4' target=_blank>Squarespace vs Shopify Ecommerce: What&#x27;s Actually Built In</a> (Aug 08)</div><div class=sub>• We made @cindyguitars a new website that hits all the right notes 🎸🤘</div><div class=sub>• Squarespace Blueprint AI vs Shopify&#x27;s AI Builder</div><div class='sub linkrow' style='margin-top:6px'><a href='https://www.youtube.com/channel/UCYNxoffNZ2fXLGggyhl8Yqg' target=_blank>youtube</a><a href='https://x.com/squarespace' target=_blank>x</a><a href='https://www.linkedin.com/company/squarespace' target=_blank>linkedin</a><a href='https://www.facebook.com/squarespace' target=_blank>facebook</a><a href='https://www.facebook.com/ads/library/?active_status=all&amp;ad_type=all&amp;country=ALL&amp;view_all_page_id=100064536500635' target=_blank>meta ads</a><a href='https://adstransparency.google.com/advertiser/AR03332077890714992641?region=anywhere' target=_blank>google ads</a></div></div><div class=card><span class=name>Ecwid</span><div class=cellmain style='margin-top:4px'><b>0</b> видеа за 30 дни</div><div class=sub>Най-ново: <a href='https://www.youtube.com/shorts/M7nuuaS14_8' target=_blank>#Shorts Earth Day Tips for Businesses</a> (Mar 19)</div><div class='sub linkrow' style='margin-top:6px'><a href='https://www.youtube.com/channel/UCsoUdGzYRL8yK8ixBafhkKQ' target=_blank>youtube</a><a href='https://x.com/ecwid' target=_blank>x</a><a href='https://www.linkedin.com/company/ecwid' target=_blank>linkedin</a><a href='https://www.facebook.com/ecwid' target=_blank>facebook</a><a href='https://www.facebook.com/ads/library/?active_status=all&amp;ad_type=all&amp;country=ALL&amp;view_all_page_id=100064707518285' target=_blank>meta ads</a><a href='https://adstransparency.google.com/?region=anywhere&amp;domain=ecwid.com' target=_blank>google ads</a></div></div><div class=card><span class=name>Shift4Shop</span><div class=cellmain style='margin-top:4px'><b>0</b> видеа за 30 дни</div><div class=sub>Най-ново: <a href='https://www.youtube.com/watch?v=iUZaFRiLzk8' target=_blank>PayPal Pay Later</a> (Aug 24)</div><div class='sub linkrow' style='margin-top:6px'><a href='https://www.youtube.com/channel/UC_b1XyRX8gw093PS6rkU6FQ' target=_blank>youtube</a><a href='https://x.com/Shift4Shop' target=_blank>x</a><a href='https://www.linkedin.com/company/shift4shop' target=_blank>linkedin</a><a href='https://www.facebook.com/3dcart' target=_blank>facebook</a><a href='https://www.facebook.com/ads/library/?active_status=all&amp;ad_type=all&amp;country=ALL&amp;view_all_page_id=61578480932403' target=_blank>meta ads</a><a href='https://adstransparency.google.com/?region=anywhere&amp;domain=shift4shop.com' target=_blank>google ads</a></div></div><div class=basis>Видео ритъмът идва от публичните канали в YouTube. Google броячите са от Центъра за прозрачност на рекламите (без удостоверяване; Wix рекламира чрез регионални дружества, затова има само търсеща връзка). Библиотеката на Meta е на един клик за всяка платформа и показва обхват в ЕС ПО ДЪРЖАВИ (данни по DSA) — най-бързият поглед къде рекламират агресивно. Задайте METAAD_TOKEN, за да влизат броячите на Meta автоматично.</div><footer class=foot>ecommerce-intelligence, вътрешна употреба</footer></main></div><script>
+var tb=document.getElementById('themebtn');
+if(tb){tb.addEventListener('click',function(){
+var r=document.documentElement,
+d=r.getAttribute('data-theme')==='dark'?'':'dark';
+if(d)r.setAttribute('data-theme',d);else r.removeAttribute('data-theme');
+try{localStorage.setItem('cc-theme',d)}catch(e){}
+tb.querySelector('.tlab').textContent=d?'Светла тема':'Тъмна тема';});}
+
+document.querySelectorAll('table.dense th').forEach(function(th){
+th.style.cursor='pointer';th.title='Сортирай';
+th.addEventListener('click',function(){
+var tb=th.closest('table').tBodies[0],i=[].indexOf.call(th.parentNode.children,th),
+rows=[].slice.call(tb.rows),asc=th.dataset.asc!=='1';
+th.dataset.asc=asc?'1':'0';
+rows.sort(function(a,b){
+var x=(a.cells[i]||{}).textContent||'',y=(b.cells[i]||{}).textContent||'';
+var nx=parseFloat(x.replace(/[^0-9.\-]/g,'')),ny=parseFloat(y.replace(/[^0-9.\-]/g,''));
+if(!isNaN(nx)&&!isNaN(ny))return asc?nx-ny:ny-nx;
+return asc?x.localeCompare(y):y.localeCompare(x);});
+rows.forEach(function(r){tb.appendChild(r)});});});
+</script></body></html>

@@ -1,0 +1,625 @@
+{
+ "generated": "2026-08-08",
+ "note": "Verified against official vendor pages by paired research+verify agents. Edit freely; run_all.py renders features.html from this.",
+ "vendors": {
+  "CloudCart": {
+   "features": {
+    "free_tier": {
+     "status": "partial",
+     "note": "No permanent free plan, but a 30-day free trial ('Start your 30 Days Free Trial'); cheapest plan from EUR 14/mo billed annually (Baby Pack)",
+     "source_url": "https://cloudcart.com/pricing"
+    },
+    "txn_fees": {
+     "status": "no",
+     "note": "0% transaction fee on every plan - 'All our plans come with 0% commission on your orders and payments' (payment-provider fees still apply separately)",
+     "source_url": "https://cloudcart.com/pricing"
+    },
+    "pos": {
+     "status": "no",
+     "note": "No native retail POS/cash-register product; 'POS' in CloudCart means virtual card terminals (Borica, Fibank, myPOS), and physical retail is served via the Locations/Local Pickup app, 'pay at store' and ERP integrations",
+     "source_url": "https://cloudcart.com/connected-ecommerce/software-features/payment-methods-providers-store-integrations"
+    },
+    "b2b": {
+     "status": "yes",
+     "note": "Dedicated B2B store module (CloudCart Extended): customer-group pricing, registered-only catalog access, manual user approval, quick bulk orders, and VIES VAT validation",
+     "source_url": "https://cloudcart.com/extended/b2b-store"
+    },
+    "multilang": {
+     "status": "addon",
+     "note": "Via CloudCart's first-party 'Multilingual Store App' - auto NLP translation to 15+ languages plus an IP Geolocation Redirect app; machine-translation and copy-per-language quotas are plan-gated (AI product translation only on top plan)",
+     "source_url": "https://cloudcart.com/extended/cross-border-sales"
+    },
+    "multicurrency": {
+     "status": "partial",
+     "note": "One currency per store; extra currencies are set per language version via the Multilingual app using a manual price multiplier (e.g. BGN 120 x0.5 = ~60 EUR) - no live-FX storefront currency switcher",
+     "source_url": "https://help.cloudcart.com/en/support/solutions/articles/77000524994-additional-language-version-of-your-store-with-the-multilingual-store-app"
+    },
+    "ai_tools": {
+     "status": "yes",
+     "note": "Пълна AI екосистема: CloudIO (описания, VisionSense от снимки, RankMaster AI SEO), AI асистент за магазина: управлява каталог, поръчки и операции, и AI консиерж на витрината: 24/7 продажбен и съветващ асистент за клиентите на търговеца",
+     "source_url": "https://cloudcart.com/marketing-suite/cloudio",
+     "internal_note": "Store assistant + клиентски консиерж потвърдени от екипа 08.08.2026"
+    },
+    "app_store": {
+     "status": "yes",
+     "note": "Own in-house App Store, but small: site claims 'Over 160 apps' on one page and 'over 4000 apps' on another - either way a fraction of Shopify's ecosystem",
+     "source_url": "https://cloudcart.com/core/cloud-hosting-and-security"
+    },
+    "api_headless": {
+     "status": "partial",
+     "note": "REST API и GraphQL API (продукти, варианти, поръчки, клиенти, отстъпки) с документация; ставките са по план (50/100/150 заявки/мин), headless режимът е обявен като предстоящ",
+     "source_url": "https://developers.cloudcart.com/2.0/overview",
+     "internal_note": "GraphQL потвърден от екипа 08.08.2026; не личи в публичните документи (SPA)"
+    },
+    "hosting": {
+     "status": "yes",
+     "note": "'Hosting is included in the price of the paid subscription' - Google Cloud infrastructure, PCI-DSS Level 1 security, CDN in 199+ territories, daily backups, own-SSL install supported",
+     "source_url": "https://cloudcart.com/core/cloud-hosting-and-security"
+    },
+    "eu_local": {
+     "status": "yes",
+     "note": "Bulgarian platform: one-click local gateways (ePay, Borica WAY4, myPOS, Paysera, Fibank/UBB/DSK vPOS, TBI/UniCredit/BNP/DSK financing), Econt/Speedy couriers, monthly NRA audit file, automated EU VAT with real-time VIES validation, invoicing engine, full Bulgarian-language site and support",
+     "source_url": "https://cloudcart.com/connected-ecommerce/software-features/payment-methods-providers-store-integrations"
+    },
+    "support": {
+     "status": "yes",
+     "note": "AI агент поема първа линия мигновено, 24/7 (съзнателна стратегия, не спестяване); телефон, лични срещи и Customer Success Manager на CC Pro/Master; поддръжка на български",
+     "source_url": "https://cloudcart.com/extended/premium-support",
+     "internal_note": "Преформулирано по указание на екипа, 08.08.2026"
+    },
+    "gmv_caps": {
+     "status": "yes",
+     "note": "Every plan carries a six-month turnover cap - EUR 9,999 (Baby), 24,999 (Starter), 249,999 (CC Pro), 499,999 (CC Master) - forcing an upgrade (custom 'Unicorn' plan above that); product caps 100/2,000/7,500/unlimited also apply",
+     "source_url": "https://cloudcart.com/pricing"
+    }
+   },
+   "summary": "CloudCart's strongest cards are 0% transaction fees on all plans, all-inclusive Google Cloud hosting with CDN and PCI-DSS L1, a genuine B2B store module, CloudIO AI copy/SEO tools, and unmatched Bulgaria/EU localization (ePay, Borica, myPOS, Paysera and bank vPOS integrations, monthly NRA audit files, automated EU VAT with VIES validation, Bulgarian-language support). Honest weaknesses: no native POS for physical retail, headless commerce still 'coming soon' with plan-gated API rate limits, multi-language/multi-currency handled through an app with per-language-version currencies rather than a true switcher, AI-first support with humans (phone/meetings) only on higher plans, a small app ecosystem (~160 apps), and six-month turnover caps (EUR 9,999-499,999) that force plan upgrades as merchants grow.",
+   "verified": true
+  },
+  "Shopify": {
+   "features": {
+    "free_tier": {
+     "status": "partial",
+     "note": "No free plan: free 3-day trial (no credit card), then 1 EUR/month for the first 3 months on most plans; paid plans from 27 EUR/mo (Basic).",
+     "source_url": "https://www.shopify.com/pricing"
+    },
+    "txn_fees": {
+     "status": "partial",
+     "note": "0% only with Shopify Payments; third-party payment providers incur platform fees of 2% (Basic), 1% (Grow), 0.6% (Advanced), 0.2% (Plus) on top of processor charges.",
+     "source_url": "https://www.shopify.com/pricing"
+    },
+    "pos": {
+     "status": "partial",
+     "note": "POS Pro 79 €/мес. на локация (годишно), но Shopify Payments не поддържа POS плащания в България: нужен е външен терминал и процесор на трета страна с допълнителна такса 0,6–2 %",
+     "source_url": "https://help.shopify.com/en/manual/payments/shopify-payments/supported-countries/bulgaria/payment-methods"
+    },
+    "b2b": {
+     "status": "partial",
+     "note": "\"If you're on a Plus plan, B2B on Shopify is included at no extra cost\": company profiles, custom catalogs, price lists, net terms; requires Plus (from 2100 EUR/mo).",
+     "source_url": "https://www.shopify.com/plus/solutions/b2b-ecommerce"
+    },
+    "multilang": {
+     "status": "partial",
+     "note": "Multi-language storefronts supported via Markets, but translation content needs Shopify's free first-party Translate & Adapt app: auto-translates only 2 languages free, unlimited manual translations.",
+     "source_url": "https://apps.shopify.com/translate-and-adapt"
+    },
+    "multicurrency": {
+     "status": "yes",
+     "note": "Shopify Markets: \"Local languages and currencies: localize your store for each region; with Shopify Payments, people can pay in local currency\" with dynamic FX rates.",
+     "source_url": "https://www.shopify.com/markets"
+    },
+    "ai_tools": {
+     "status": "yes",
+     "note": "Sidekick, an \"AI-enabled commerce assistant\" to start/run/grow the business, plus Shopify Magic AI generation of product descriptions, images and store content, included across plans.",
+     "source_url": "https://www.shopify.com/magic"
+    },
+    "app_store": {
+     "status": "yes",
+     "note": "Shopify App Store advertises 16,000 apps: by far the largest ecommerce app ecosystem.",
+     "source_url": "https://apps.shopify.com/"
+    },
+    "api_headless": {
+     "status": "yes",
+     "note": "Full Storefront API (GraphQL) plus the Hydrogen framework: \"everything you need to build fast, and deliver personalized shopping experiences\" headless.",
+     "source_url": "https://shopify.dev/docs/api/storefront"
+    },
+    "hosting": {
+     "status": "yes",
+     "note": "\"Shopify includes secure, unlimited ecommerce hosting... unlimited bandwidth (no bandwidth fees) and provides a free TLS/SSL certificate\" on all plans.",
+     "source_url": "https://www.shopify.com/pricing"
+    },
+    "eu_local": {
+     "status": "partial",
+     "note": "Shopify Payments IS now available in Bulgaria (cards, Apple/Google Pay, EU local methods like iDEAL|Wero, Bancontact; EUR pricing ~1.9%+0.25 EUR online); Shopify Tax auto-calculates EU VAT by location but does not file/remit VAT or issue local fiscal invoices natively.",
+     "source_url": "https://help.shopify.com/en/manual/payments/shopify-payments/supported-countries/bulgaria"
+    },
+    "support": {
+     "status": "yes",
+     "note": "24/7 chat support on all plans, offered in ~20 languages including Bulgarian (\"Poddrazhka 24/7 na balgarski\": support staff plus virtual Help Center assistant); priority options on higher plans, no standard inbound phone line.",
+     "source_url": "https://www.shopify.com/pricing"
+    },
+    "gmv_caps": {
+     "status": "partial",
+     "note": "No GMV caps or setup fees on standard plans, but Shopify Plus pricing carries \"online variable platform fees\" that scale with volume (lowered by committing to a 3-year term).",
+     "source_url": "https://www.shopify.com/plus/pricing"
+    }
+   },
+   "summary": "Shopify's strengths are ecosystem and completeness: a 16,000-app marketplace, native POS on every plan, Sidekick/Magic AI included, full Storefront API + Hydrogen headless stack, Markets multicurrency, and 24/7 chat support in Bulgarian — and Shopify Payments is now live in Bulgaria, removing its historic weakness there. Its weaknesses for a Bulgarian merchant pitch: no free plan (3-day trial then 1 EUR/mo promo), 0.2-2% platform transaction fees whenever a third-party/local payment provider is used instead of Shopify Payments, B2B locked behind Plus (from 2100 EUR/mo with volume-based variable platform fees), translation requiring the Translate & Adapt app (only 2 auto-translated languages free), and no native EU VAT filing or local fiscal invoicing.",
+   "verified": true
+  },
+  "BigCommerce": {
+   "features": {
+    "free_tier": {
+     "status": "partial",
+     "note": "No free plan; fully functional 15-day free trial, no credit card required, store deleted 90 days after trial if no plan chosen",
+     "source_url": "https://www.bigcommerce.com/essentials/pricing/"
+    },
+    "txn_fees": {
+     "status": "partial",
+     "note": "$0 fee only with Embedded Payment Providers (Stripe, PayPal, Adyen, etc.); an 'Open Payment Provider Fee' of 2.0% (Core), 1.0% (Growth), 0.6% (Scale) applies to orders through any other gateway: the old blanket '0% transaction fees' claim no longer holds",
+     "source_url": "https://www.bigcommerce.com/essentials/pricing/"
+    },
+    "pos": {
+     "status": "addon",
+     "note": "No native POS: 'complete freedom to choose the POS provider' via partners (PayPal Zettle, Clover, Heartland Retail, ConnectPOS, Vend, Hike, Epos Now); only BOPIS APIs are native",
+     "source_url": "https://www.bigcommerce.com/product/pos/"
+    },
+    "b2b": {
+     "status": "partial",
+     "note": "Strong B2B via B2B Edition (buyer portal, company hierarchies, quotes/CPQ, net terms, approval workflows) but it is a paid upgrade product ('invest in our award-winning B2B Edition'); native Price Lists are gated to the top Performance tier",
+     "source_url": "https://www.bigcommerce.com/solutions/b2b-ecommerce-platform/"
+    },
+    "multilang": {
+     "status": "partial",
+     "note": "'Each storefront can only support a single language': multi-language means a separate storefront per language (add-on storefronts $30-$100/mo, capped at 3/5/8 by plan) or third-party apps; Bulgarian is not among the ~15 supported theme system-string languages",
+     "source_url": "https://developer.bigcommerce.com/docs/storefront/stencil/themes/localization"
+    },
+    "multicurrency": {
+     "status": "partial",
+     "note": "Display (active) currencies on all plans with static/dynamic rates and per-currency price lists, but transactional multi-currency officially supports only the Stripe gateway ('Other Payment Gateways: Not Supported')",
+     "source_url": "https://developer.bigcommerce.com/docs/store-operations/currencies"
+    },
+    "ai_tools": {
+     "status": "partial",
+     "note": "BigAI Copywriter (product descriptions, English only) is live and free; Product Recommendations and Predictive Analytics are 'coming soon, exclusively for Enterprise plans'; AI search/chat comes from partners (Klevu, Bloomreach, Searchspring); no AI store builder",
+     "source_url": "https://www.bigcommerce.com/solutions/ai-for-commerce/"
+    },
+    "app_store": {
+     "status": "yes",
+     "note": "Official marketplace with 'over 1,200 apps' plus certified technology and agency partner programs",
+     "source_url": "https://www.bigcommerce.com/essentials/pricing/"
+    },
+    "api_headless": {
+     "status": "yes",
+     "note": "'API-first' with full REST + GraphQL Storefront APIs, the open-source Catalyst Next.js storefront framework, and integrations for Next.js/Gatsby/Nuxt and CMSs (WordPress, Contentful, Prismic, Contentstack); no plan restriction stated",
+     "source_url": "https://www.bigcommerce.com/solutions/headless-commerce/"
+    },
+    "hosting": {
+     "status": "yes",
+     "note": "Fully hosted SaaS with free sitewide HTTPS and dedicated SSL on every plan, 99.98% uptime since 2009 (100% during Cyber Week since 2016), ISO/SOC/PCI/GDPR certifications",
+     "source_url": "https://www.bigcommerce.com/product/secure-web-hosting/"
+    },
+    "eu_local": {
+     "status": "partial",
+     "note": "EUR supported and embedded providers include pan-EU processors (Stripe, Adyen, PayPal, Klarna, Checkout.com), but no Bulgarian local processors (no ePay/Borica/myPOS on the embedded list, so local gateways would incur the Open Provider fee), no bigcommerce.com Bulgaria site, and EU VAT/OSS invoicing is not built in: only tax-inclusive display and tax zones via settings/API or third-party tax providers",
+     "source_url": "https://www.bigcommerce.com/essentials/pricing/"
+    },
+    "support": {
+     "status": "yes",
+     "note": "24/7 chat and email support on all plans; 24/7 phone included on Growth, Scale and Performance (phone is a paid add-on 'coming soon' for Core); support is English-language",
+     "source_url": "https://www.bigcommerce.com/essentials/pricing/"
+    },
+    "gmv_caps": {
+     "status": "yes",
+     "note": "Hard GMV caps with forced auto-upgrades: Core ($29-39/mo) caps at $30K TTM GMV then auto-upgrades to Growth ($79-105/mo), Growth caps at $100K then auto-upgrades to Scale ($299-399/mo), Scale caps at $33,333/mo GMV with a 0.9% overage fee above it and auto-upgrade to custom-priced Performance (from $1,499/mo) at $2M TTM",
+     "source_url": "https://www.bigcommerce.com/essentials/pricing/"
+    }
+   },
+   "summary": "BigCommerce's strengths are enterprise-grade openness: full REST/GraphQL APIs with the Catalyst headless framework, a 1,200+ app marketplace, robust (plan-gated) B2B Edition, and fully managed hosting with free SSL and strong uptime. Its weaknesses are pricing traps and localization gaps: GMV-based forced auto-upgrades (Core $30K -> Growth $100K -> Scale, with 0.9% overage on Scale and auto-upgrade to $1,499+/mo Performance at $2M TTM), a 0.6-2.0% fee on any non-embedded payment provider that undercuts the \"0% transaction fees\" pitch, no native POS (partners only), one language per storefront (extra storefronts cost $30-100/mo each), and transactional multi-currency officially limited to Stripe. For Bulgaria/EU, EUR and pan-EU gateways work but there are no local Bulgarian processors on the fee-free embedded list and no built-in EU VAT/OSS invoicing.",
+   "verified": true
+  },
+  "Squarespace": {
+   "features": {
+    "free_tier": {
+     "status": "partial",
+     "note": "No free plan: every site starts with a 14-day free trial, no credit card required",
+     "source_url": "https://www.squarespace.com/pricing"
+    },
+    "txn_fees": {
+     "status": "partial",
+     "note": "2% commerce fee on Basic (0% on Core/Plus/Advanced), plus a separate Digital Products fee of 7%/5%/1%/0% by plan; invoices exempt",
+     "source_url": "https://support.squarespace.com/hc/en-us/articles/27853679334157-Transaction-fees-and-payment-processing-rates"
+    },
+    "pos": {
+     "status": "partial",
+     "note": "Squarespace POS app is US- and UK-only (Square Reader US only): unusable in Bulgaria/EU retail",
+     "source_url": "https://support.squarespace.com/hc/en-us/articles/360035711431-Selling-in-person-with-Squarespace-point-of-sale"
+    },
+    "b2b": {
+     "status": "partial",
+     "note": "Only manual branded invoices to 'clients and wholesalers': no wholesale storefront, customer-specific pricing, or bulk ordering",
+     "source_url": "https://support.squarespace.com/hc/en-us/articles/30494284979085-Invoicing-clients-and-wholesalers"
+    },
+    "multilang": {
+     "status": "addon",
+     "note": "No native multilingual: built-in text (e.g. checkout) displays in one language only; requires manual page duplication or the third-party Weglot integration",
+     "source_url": "https://support.squarespace.com/hc/en-us/articles/16552875658765-Manually-creating-a-multilingual-site"
+    },
+    "multicurrency": {
+     "status": "no",
+     "note": "'You can only sell in one currency at a time'; EUR supported as store currency, BGN is not",
+     "source_url": "https://support.squarespace.com/hc/en-us/articles/205811248-Supported-countries-and-currencies-for-Squarespace-Commerce"
+    },
+    "ai_tools": {
+     "status": "yes",
+     "note": "Blueprint AI site builder + Design Intelligence AI copy (product descriptions, email, blogs, SEO); metered AI Credits by plan: 10 one-time on Basic up to 120/month on Advanced",
+     "source_url": "https://www.squarespace.com/design-intelligence"
+    },
+    "app_store": {
+     "status": "partial",
+     "note": "Squarespace Extensions is a small third-party directory (~60+ integrations in 4 categories: shipping, inventory, finance, marketing): no true app platform",
+     "source_url": "https://www.squarespace.com/extensions/home"
+    },
+    "api_headless": {
+     "status": "partial",
+     "note": "Read/sync Commerce APIs only (Orders, Products, Inventory, Transactions, Webhooks), plan-gated to Core+; no cart/checkout API, so no real headless storefront",
+     "source_url": "https://support.squarespace.com/hc/en-us/articles/236297987-Squarespace-API-keys"
+    },
+    "hosting": {
+     "status": "yes",
+     "note": "Fully hosted with SSL security and unlimited bandwidth on all plans",
+     "source_url": "https://www.squarespace.com/pricing"
+    },
+    "eu_local": {
+     "status": "partial",
+     "note": "Squarespace Payments covers only 10 EU countries and NOT Bulgaria: Bulgarian merchants must use Stripe or PayPal; EUR stores work and automated EU VAT incl. OSS is on Core+ plans, but no BGN and no local processors",
+     "source_url": "https://support.squarespace.com/hc/en-us/articles/33482360045069-Squarespace-Payments-availability"
+    },
+    "support": {
+     "status": "partial",
+     "note": "24/7 email plus live chat Mon-Fri 4am-8pm ET (English; French/German chat 10am-4pm CET); explicitly no phone support, no Bulgarian",
+     "source_url": "https://support.squarespace.com/hc/en-us/articles/219648707-How-do-I-contact-Squarespace-Customer-Support"
+    },
+    "gmv_caps": {
+     "status": "no",
+     "note": "No turnover/GMV caps: 'Sell unlimited products and services' on all plans; upgrade pressure comes from Basic's 2%/7% fees, not sales limits",
+     "source_url": "https://www.squarespace.com/pricing"
+    }
+   },
+   "summary": "Squarespace's strengths are design-led simplicity: all-inclusive hosting/SSL/bandwidth, strong AI tooling (Blueprint AI, Design Intelligence with plan-metered AI credits), no GMV caps, and automated EU VAT with OSS on Core and above. Its weaknesses for EU/Bulgarian e-commerce are structural: single-currency stores (no BGN), no native multilingual (Weglot add-on or manual duplication), POS limited to the US/UK, Squarespace Payments unavailable in Bulgaria (Stripe/PayPal only), a tiny extensions directory, and sync-only APIs with no headless checkout. Transaction fees bite on the entry plan — 2% on commerce plus up to 7% on digital products until you climb the plan ladder — and support is chat/email only with no phone and no Bulgarian-language option.",
+   "verified": true
+  },
+  "Shift4Shop": {
+   "features": {
+    "free_tier": {
+     "status": "partial",
+     "note": "$0 End-to-End plan (a $229/mo value) is US merchants only and runs on Shift4 Payments; non-US merchants get no free plan (an 'unlimited, enterprise-grade plan for $41/month'), and a 'monthly SaaS fee may be charged depending on your plan and monthly processing amount'",
+     "source_url": "https://www.shift4shop.com/plans.html?country=us"
+    },
+    "txn_fees": {
+     "status": "no",
+     "note": "0% on all plans: 'No additional transaction fees'; FAQ: 'you only pay the normal fees required by your payment processor'",
+     "source_url": "https://www.shift4shop.com/plans.html?country=us"
+    },
+    "pos": {
+     "status": "no",
+     "note": "No POS row in the current plan feature matrix (only In-Store Pickup and Phone Orders); the legacy 3dcart POS-app KB article now returns 'article does not exist' and the GiftLogic POS app listing shows 'Product Not Available': parent Shift4 sells SkyTab POS separately (US, hospitality-focused), not as part of Shift4Shop",
+     "source_url": "https://www.shift4shop.com/plans.html?country=us"
+    },
+    "b2b": {
+     "status": "yes",
+     "note": "Dedicated B2B eCommerce solution ('sell B2C at the same time from the same website') with built-in Customer Groups, wholesale/bulk quantity discounts, Quote System, Purchase Order module and Sales Rep module on standard plans",
+     "source_url": "https://www.shift4shop.com/b2b-ecommerce.html"
+    },
+    "multilang": {
+     "status": "no",
+     "note": "One language per store, Roman/Latin alphabet only (no Cyrillic/Greek/Chinese): official KB: 'if your site needs to be in multiple languages, you will need to purchase one cart per language'",
+     "source_url": "https://support.3dcart.com/knowledgebase/article/View/115/6/can-i-set-my-store-to-a-different-language"
+    },
+    "multicurrency": {
+     "status": "addon",
+     "note": "Checkout runs in a single base currency; multi-currency is display-only via the third-party Dynamic Converter app ('inline dual display currency conversion', $9.99 billing option): not true multi-currency selling",
+     "source_url": "https://apps.shift4shop.com/dynamic-currency-converter.html"
+    },
+    "ai_tools": {
+     "status": "no",
+     "note": "No AI store builder, product-copy generator or agents anywhere on official feature/pricing pages; the only AI claim is 'industry-leading, AI-driven fraud protection powered by Kount'",
+     "source_url": "https://www.shift4shop.com/plans.html?country=notUS"
+    },
+    "app_store": {
+     "status": "partial",
+     "note": "App store exists at apps.shift4shop.com but is small and dated: homepage is still titled 'Ecommerce App Marketplace by 3dcart', features ~25 categories with only a handful of apps surfaced, and some listings return 'Product Not Available'",
+     "source_url": "https://apps.shift4shop.com/"
+    },
+    "api_headless": {
+     "status": "partial",
+     "note": "REST API access included on every plan; developer portal offers the Shift4Shop REST API, theme engine, and a limited front-end API (retrieve product info, add/view cart): no dedicated headless storefront or GraphQL stack",
+     "source_url": "https://developer.3dcart.com/"
+    },
+    "hosting": {
+     "status": "yes",
+     "note": "Fully hosted with free SSL certificate, free domain (registered and renewed free yearly), unlimited bandwidth, PCI-certified, 99.99% uptime guarantee; CDN not explicitly named on fetched pages",
+     "source_url": "https://www.shift4shop.com/end-to-end-plan.html"
+    },
+    "eu_local": {
+     "status": "partial",
+     "note": "Weak EU/Bulgaria fit: free plan is US-only (non-US pays $41/mo with PayPal-based integrated payments), a site modal tells some visitors 'our platform isn't yet available in your country or region', VAT support is a basic display-format module (no OSS invoicing documented), and Cyrillic storefronts are unsupported",
+     "source_url": "https://www.shift4shop.com/plans.html?country=notUS"
+    },
+    "support": {
+     "status": "yes",
+     "note": "24x7 tech support on all plans: online chat, tickets and phone (1-800-828-6650, a US toll-free number); documentation and support in English only",
+     "source_url": "https://www.shift4shop.com/plans.html?country=us"
+    },
+    "gmv_caps": {
+     "status": "yes",
+     "note": "Paid plans cap online sales at $100k (Basic), $250k (Plus) and $1M (Pro) per year, and 'you will be automatically upgraded to the next plan' once trailing-12-month sales hit the cap; over $1M requires Enterprise; only the US-only free End-to-End plan has no revenue caps Извън САЩ: платени планове от 29 $ (с лимити) или E2E вариантът за 41 $/мес. без лимити.",
+     "source_url": "https://www.shift4shop.com/plans.html?country=us"
+    }
+   },
+   "summary": "Shift4Shop's pitch is feature depth for money: every plan gets unlimited products, REST API access, B2B modules (customer groups, quotes, POs), 24/7 chat/phone support, hosting/SSL/domain included, and 0% transaction fees — with a genuinely free unlimited plan for US merchants who process through Shift4 Payments. Internationally it collapses: no free plan outside the US ($41/mo, PayPal-based payments), some countries blocked from signup entirely, one language per store with Latin-alphabet-only support (Bulgarian Cyrillic impossible), display-only multi-currency via a paid third-party app, and only a basic VAT-display module. Momentum is also a liability — no AI tooling, a small app store still branded '3dcart' with dead listings, a vanished POS offering, and forced automatic upgrades when paid plans hit $100k/$250k/$1M GMV caps.",
+   "verified": true
+  },
+  "Wix": {
+   "features": {
+    "free_tier": {
+     "status": "yes",
+     "note": "Free $0 plan, no credit card required, but it cannot sell: 'Accept payments' is listed only from the Core plan up; paid plans carry a 14-day money-back guarantee",
+     "source_url": "https://www.wix.com/plans"
+    },
+    "txn_fees": {
+     "status": "no",
+     "note": "No Wix commission on store sales: only payment-processing fees (Wix Payments EU cards 1.9% + EUR 0.30, US 2.9% + $0.30; cross-border 1-1.5%, currency conversion 1-2%); exception: 2.5% ticket service fee on Wix Events tickets",
+     "source_url": "https://support.wix.com/en/article/wix-payments-service-fees"
+    },
+    "pos": {
+     "status": "partial",
+     "note": "Wix POS is 'currently available to users based in the U.S., Canada and U.K. (except Northern Ireland) who are connected to Wix Payments': no POS for Bulgaria/EU merchants",
+     "source_url": "https://www.wix.com/pos"
+    },
+    "b2b": {
+     "status": "addon",
+     "note": "No native B2B module: Wix's own wholesale guide routes B2B through the third-party SparkLayer app, which requires unique SKUs on every variant plus a Members Area",
+     "source_url": "https://support.wix.com/en/article/wix-stores-selling-wholesale-with-sparklayer"
+    },
+    "multilang": {
+     "status": "yes",
+     "note": "Wix Multilingual translates a site manually or automatically (Google Translate) to over 180 languages, with an auto-added language selection menu",
+     "source_url": "https://support.wix.com/en/article/wix-multilingual-an-overview"
+    },
+    "multicurrency": {
+     "status": "partial",
+     "note": "Customers can view and pay in local currency, but only with Wix Payments, PayPal or Stripe, and only for Wix Stores; unsupported currencies become display-only and conversion adds 1-2%",
+     "source_url": "https://support.wix.com/en/article/multi-currency-overview"
+    },
+    "ai_tools": {
+     "status": "yes",
+     "note": "AI website builder creates a business-ready site from a prompt with built-in AI agent 'Aria'; eCommerce AI generates storefront design, on-brand product copy and product imagery",
+     "source_url": "https://www.wix.com/ai-website-builder"
+    },
+    "app_store": {
+     "status": "yes",
+     "note": "Wix App Market with hundreds of first- and third-party apps across Sell Online, Marketing, Chat and CRM categories; many apps are 'Premium Site Required' or separately paid",
+     "source_url": "https://www.wix.com/app-market"
+    },
+    "api_headless": {
+     "status": "partial",
+     "note": "Wix Headless gives full REST APIs + JavaScript SDK with 'no API fees' and frontends hosted on Vercel/Netlify/AWS, but payments always run through the Wix-hosted secure checkout",
+     "source_url": "https://www.wix.com/studio/development/headless"
+    },
+    "hosting": {
+     "status": "yes",
+     "note": "'Wix provides secure and free web hosting as soon as you publish your site'; every paid plan includes multi-cloud hosting, SSL/DNS handled for you, PCI DSS Level 1",
+     "source_url": "https://www.wix.com/ecommerce/website"
+    },
+    "eu_local": {
+     "status": "partial",
+     "note": "Wix Payments is NOT available in Bulgaria (only 15 countries, e.g. DE/AT/NL/ES/IT in EUR): Bulgarian merchants must use PayPal, Stripe, SumUp, Fondy or Tranzzo; tax automation is via Avalara and Wix Invoices is not a PEPPOL/e-invoicing gateway",
+     "source_url": "https://support.wix.com/en/article/available-payment-providers-in-your-country"
+    },
+    "support": {
+     "status": "yes",
+     "note": "Free 24/7 chat in English plus phone callback (English Mon-Fri 2AM-6PM EST); several other languages (Dutch, French, etc.) on limited weekday hours: no Bulgarian support listed",
+     "source_url": "https://support.wix.com/en/article/contacting-wix-customer-care-for-support"
+    },
+    "gmv_caps": {
+     "status": "no",
+     "note": "No turnover/GMV caps, forced upgrades or overage fees: plan tiers (Light/Core/Business/Business Elite) differ by storage (2 GB to unlimited) and feature depth, not sales volume",
+     "source_url": "https://www.wix.com/plans"
+    }
+   },
+   "summary": "Wix's strengths are price-side: a real free plan, 0% platform commission on store sales (processing fees only, ~1.9% + EUR 0.30 in the EU), no GMV caps, AI site/copy/image generation, a 180+ language multilingual app, a large App Market and bundled hosting/SSL. Its weaknesses for the Bulgarian/EU market are that Wix Payments and Wix POS are unavailable in Bulgaria (merchants fall back to PayPal/Stripe/SumUp/Fondy/Tranzzo, POS not at all), B2B/wholesale requires the third-party SparkLayer app, multi-currency works only with specific providers, and headless builds still funnel through Wix-hosted checkout. Selling requires at least the Core paid plan, and support has no Bulgarian-language channel.",
+   "verified": true
+  },
+  "Ecwid": {
+   "features": {
+    "free_tier": {
+     "status": "no",
+     "note": "No free plan or free trial anymore: 'we offer four paid plans (Starter, Venture, Business, and Unlimited)'; entry is Starter at $5/mo with a 10-product cap (nonprofits can get 6 months of Venture free)",
+     "source_url": "https://support.ecwid.com/hc/en-us/articles/207100729-Ecwid-plans-and-features"
+    },
+    "txn_fees": {
+     "status": "no",
+     "note": "0% on all plans: pricing FAQ states 'we don't charge any setup or transaction fees on any of our plans'; comparison table shows $0/€0 transaction fees on every tier",
+     "source_url": "https://www.ecwid.com/pricing"
+    },
+    "pos": {
+     "status": "partial",
+     "note": "Mobile point-of-sale via the Ecwid app for in-person cash sales; real POS is integration-based and plan-gated: Lightspeed Retail POS (X-Series) sync on Business+, Square and Clover POS only on Unlimited ($149/mo) and in limited countries",
+     "source_url": "https://support.ecwid.com/hc/en-us/articles/207100729-Ecwid-plans-and-features"
+    },
+    "b2b": {
+     "status": "partial",
+     "note": "Wholesale pricing groups (exclusive storewide discounts for wholesale client groups) from the Business plan ($65/mo); customer groups and manually created orders exist, but no full B2B suite (no quotes, net terms, or company accounts)",
+     "source_url": "https://www.ecwid.com/pricing"
+    },
+    "multilang": {
+     "status": "partial",
+     "note": "Multilingual catalog with storefront language switcher is gated to Business ($65/mo) and Unlimited plans; Instant Site website translation only on the new-gen Instant Site",
+     "source_url": "https://support.ecwid.com/hc/en-us/articles/207100729-Ecwid-plans-and-features"
+    },
+    "multicurrency": {
+     "status": "addon",
+     "note": "One currency per store: multi-currency display only via App Market apps (Currency Converter, $4.49/mo, Venture+ required); ~130 currencies shown but 'at checkout, your customers will pay in the main currency of your store'",
+     "source_url": "https://support.ecwid.com/hc/en-us/articles/360000857760-Displaying-prices-in-different-currencies"
+    },
+    "ai_tools": {
+     "status": "partial",
+     "note": "Built-in AI writes, formats, and translates product descriptions and SEO copy: but 'Plan availability: Unlimited' ($149/mo) only; AI image background removal/enhancer and AI domain suggestions are built in; no AI store builder or shopping agent",
+     "source_url": "https://support.ecwid.com/hc/en-us/articles/18231317286172-Creating-formatting-and-translating-product-descriptions-with-AI"
+    },
+    "app_store": {
+     "status": "yes",
+     "note": "Ecwid App Market with free and paid apps on all four plans per support docs (pricing page markets 'Access to App Market' from Venture $35/mo); key gaps like multi-currency and marketplaces are paid apps with extra monthly fees",
+     "source_url": "https://support.ecwid.com/hc/en-us/articles/207100729-Ecwid-plans-and-features"
+    },
+    "api_headless": {
+     "status": "partial",
+     "note": "REST API only on Venture ($35/mo) and higher: not on Starter; JavaScript Storefront API on all plans, plus webhooks and custom-app docs, so headless/custom storefronts are possible on paid mid-tiers",
+     "source_url": "https://support.ecwid.com/hc/en-us/articles/207100729-Ecwid-plans-and-features"
+    },
+    "hosting": {
+     "status": "yes",
+     "note": "Fully hosted SaaS with free company.site domain including TLS/SSL certificate on all plans; pricing FAQ: 'all Ecwid plans come with unlimited bandwidth and storage at no extra cost'",
+     "source_url": "https://www.ecwid.com/pricing"
+    },
+    "eu_local": {
+     "status": "partial",
+     "note": "EUR billing, automatic EU VAT rates, tax invoices with VAT ID, reverse charge, and OSS/IOSS guidance are built in; Bulgaria gateway list = Stripe and PayPal on Starter, plus Viva Wallet, Revolut, 2Checkout, MultiSafepay, SEPA (via Stripe) etc. on Venture+: no Bulgarian local processors (ePay.bg, Borica, myPOS) listed",
+     "source_url": "https://support.ecwid.com/hc/en-us/articles/360003206720-Payment-options-for-Bulgaria"
+    },
+    "support": {
+     "status": "partial",
+     "note": "Support tier is plan-gated: email only on Starter; live chat 24h Mon-Fri from Venture; phone is call-backs 2PM-10PM PDT Mon-Fri in English, scheduled via chat, from Business; priority queue on Unlimited: awkward hours and English-only phone for Bulgarian/EU merchants",
+     "source_url": "https://www.ecwid.com/pricing"
+    },
+    "gmv_caps": {
+     "status": "no",
+     "note": "No turnover/GMV caps or overage fees: upgrade pressure comes from product-count caps instead: 10 (Starter), 100 (Venture), 2,500 (Business), unlimited (Unlimited)",
+     "source_url": "https://www.ecwid.com/pricing"
+    }
+   },
+   "summary": "Ecwid by Lightspeed's strengths are genuine 0% transaction fees on every plan, embedding a store into any existing website, fully hosted infrastructure with unlimited bandwidth/storage and free SSL, and solid EU VAT automation (automatic rates, VAT-ID invoices, OSS/IOSS guidance). Its weaknesses are that the famous free plan is gone (entry is a $5/mo, 10-product Starter tier), tight product-count caps drive upgrades, and much of the platform is plan-gated: REST API and most payment gateways need Venture ($35/mo), multilingual catalog, wholesale pricing, and phone support need Business ($65/mo), and built-in AI product copy plus Square/Clover POS need Unlimited ($149/mo). Multi-currency is display-only via a paid app (checkout stays in one currency), POS is integration-based rather than truly native, and phone support is English-only on US Pacific hours — real openings for a locally supported, EUR/BGN-native platform like CloudCart.",
+   "verified": true
+  },
+  "WooCommerce": {
+   "features": {
+    "free_tier": {
+     "status": "yes",
+     "note": "Core plugin is 100% free, open-source (GPL), 7+ million active installs, 4.5/5 stars from 4,813 reviews: but 'free' covers software only: hosting, domain, and most serious features are paid add-ons.",
+     "source_url": "https://wordpress.org/plugins/woocommerce/"
+    },
+    "txn_fees": {
+     "status": "no",
+     "note": "No platform transaction fees on any gateway. Optional WooPayments is pay-as-you-go with 'no setup fees, monthly fees... or other hidden charges': EU cards 1.5% + €0.25 (US 2.9% + $0.30), +2% international cards, +2% currency conversion, €15 dispute fee.",
+     "source_url": "https://woocommerce.com/document/woopayments/fees-and-debits/"
+    },
+    "pos": {
+     "status": "addon",
+     "note": "No native POS. Official route is the free 'Square for WooCommerce' extension (syncs inventory/orders with Square POS): but Square is available in only 8 countries (US, CA, AU, JP, UK, FR, ES, IE), NOT Bulgaria; extension rated 3.4/5 (129 reviews). Other POS = third-party plugins.",
+     "source_url": "https://woocommerce.com/products/square/"
+    },
+    "b2b": {
+     "status": "addon",
+     "note": "'B2B for WooCommerce' extension costs €157/year: role-based wholesale pricing, tiered quantity pricing, quote-request system with PDF quotes, registration approval, tax exemption, per-role payment/shipping restrictions.",
+     "source_url": "https://woocommerce.com/products/b2b-for-woocommerce/"
+    },
+    "multilang": {
+     "status": "addon",
+     "note": "No native multilingual. WPML 'Multilingual CMS' tier (the minimum with WooCommerce e-commerce support) costs €99/year; Polylang has a free core but Polylang for WooCommerce is paid (~€99/yr).",
+     "source_url": "https://wpml.org/purchase/"
+    },
+    "multicurrency": {
+     "status": "partial",
+     "note": "Multi-currency is built into WooPayments at no extra cost (customers pay in a currency list you define, geo-based auto-switching, custom rates/rounding): but 'it does not mean you can accept payouts in multiple currencies'; payouts stay in one currency. Without WooPayments you need a paid extension.",
+     "source_url": "https://woocommerce.com/document/woopayments/currencies/multi-currency-setup/"
+    },
+    "ai_tools": {
+     "status": "addon",
+     "note": "No bundled AI suite. Core has native MCP (Model Context Protocol) support 'enabling AI assistants and tools to interact directly with WooCommerce stores'; merchant-facing AI (recommendations, shopping assistant, 40+ languages, OpenAI-powered) is the paid 'AI Product Recommendations' extension at €35/year.",
+     "source_url": "https://woocommerce.com/products/ai-product-recommendations/"
+    },
+    "app_store": {
+     "status": "yes",
+     "note": "Official Woo Marketplace advertises 'hundreds of free and paid extensions' (third-party count: ~750 listed, only ~85 developed by Woo); plus the wider WordPress.org repo with tens of thousands of free plugins and 100+ payment gateways. Quality/compatibility vetting varies by vendor.",
+     "source_url": "https://woocommerce.com/product-category/woocommerce-extensions/"
+    },
+    "api_headless": {
+     "status": "yes",
+     "note": "REST API v3 lets 'WC data be created, read, updated, and deleted using requests in JSON format', with official libraries in JavaScript, PHP, Python and Ruby: full headless builds are possible but entirely DIY (you build and host the front end yourself).",
+     "source_url": "https://developer.woocommerce.com/docs/apis/rest-api/"
+    },
+    "hosting": {
+     "status": "no",
+     "note": "Hosting NOT included: self-hosted by design; woocommerce.com only lists 7 recommended partners (WordPress.com, Pressable, Bluehost, Hostinger, SiteGround...). Real managed-Woo prices: SiteGround $2.99–7.99/mo promo renewing at $17.99–44.99/mo; WordPress.com Commerce plan €45/mo (annual) / €70 month-to-month.",
+     "source_url": "https://woocommerce.com/hosting-solutions/"
+    },
+    "eu_local": {
+     "status": "partial",
+     "note": "WooPayments explicitly supports Bulgaria and all 26 other EU states (40+ countries, accepts 100+ currencies); EU e-invoicing via free 'PDF Invoices & Packing Slips' plugin (300,000+ installs, UBL 2.1/Peppol BIS 3.0/Factur-X, auto-attached to order emails). But no vendor-localized BG offering, no Bulgarian-language vendor support, and Square POS excludes Bulgaria: local gateways/couriers depend on third-party plugins.",
+     "source_url": "https://woocommerce.com/document/woopayments/compatibility/countries/"
+    },
+    "support": {
+     "status": "partial",
+     "note": "No vendor support for the free plugin: helpdesk (live chat/email) covers only products purchased on woocommerce.com, explicitly excludes customizations and 'hosting issues fall outside the support scope entirely'; free users rely on community forums and their hosting company. Only latest + one previous version supported.",
+     "source_url": "https://woocommerce.com/support-policy/"
+    },
+    "gmv_caps": {
+     "status": "no",
+     "note": "No GMV caps, revenue-based tiers, or forced plan upgrades: open-source GPL software where merchants 'retain full ownership of store content and data' and can use any of 100+ payment gateways with zero platform commission.",
+     "source_url": "https://wordpress.org/plugins/woocommerce/"
+    }
+   },
+   "summary": "WooCommerce is free open-source software with 7M+ installs, no GMV caps, no platform transaction fees, full data ownership, and a REST API plus hundreds-strong extension marketplace: but \"free\" is only the plugin: the merchant assembles and pays for hosting, security, updates, backups, and per-feature annual licenses (multilingual €99/yr, B2B €157/yr, AI €35/yr) with no vendor support for the core product and hosting issues explicitly out of support scope. That is the honest migration angle: merchants leave self-hosted Woo for managed platforms to escape the maintenance/security/plugin-conflict burden and unpredictable stacked costs, while Woo keeps winning on ownership, unlimited customization, and the absence of caps or platform commissions: so position against its total cost of ownership and operational risk, not its price tag.",
+   "verified": true,
+   "costs": "Realistic small-store monthly run-rate: managed Woo hosting $18–45/mo at renewal (SiteGround StartUp $17.99 → GoGeek $44.99/mo after the $2.99–7.99 first-year promo: siteground.com/woocommerce-hosting.htm) or bundled WordPress.com Commerce €45/mo billed annually (wordpress.com/pricing/); domain ~€1/mo; typical essential paid extensions €10–30/mo amortized (e.g. WPML Multilingual CMS €99/yr: wpml.org/purchase/; AI Product Recommendations €35/yr; B2B for WooCommerce €157/yr: woocommerce.com product pages; invoicing free via PDF Invoices & Packing Slips). Total ≈ €30–75/month for a small store before payment processing (WooPayments EU: 1.5% + €0.25 per card transaction, no monthly fee: woocommerce.com/document/woopayments/fees-and-debits/); first-year promos can dip under €10/mo but renewal pricing roughly triples hosting cost, and a developer/agency retainer for updates and security is a common hidden extra."
+  }
+ },
+ "positioning": {
+  "note": "Курирано от екипа върху проверените факти; редактирайте свободно.",
+  "differentiators": [
+   {
+    "title": "AI екосистема от три агента",
+    "note": "1) AI агент за поддръжка от първа линия, мигновен и денонощен; 2) AI асистент на магазина, който управлява каталога, поръчките и операциите на търговеца; 3) AI консиерж на витрината: 24/7 продажбен асистент, който отговаря на клиентите и ги води към правилния продукт. Конкурентите имат най-много админ-асистент (Shopify Sidekick); никой не покрива и трите роли."
+   },
+   {
+    "title": "0% такси + пълна локализация за България и ЕС",
+    "note": "Комбинация, която никой друг няма: 0% комисиони на всички планове заедно с ePay, Borica, myPOS, банкови vPOS, Econt/Speedy, месечен одит файл за НАП и автоматичен ЕС ДДС с VIES."
+   },
+   {
+    "title": "Индивидуални условия за enterprise клиенти",
+    "note": "Enterprise клиентите работят на индивидуален договор: разширени API лимити, персонализации на ниво платформа и checkout, интеграции по спецификация (ERP, складови и платежни системи), пряк канал към инженерния екип и отделно SLA. Стандартният SaaS модел на конкурентите ограничава този клас клиенти до конфигурация в рамките на продукта."
+   },
+   {
+    "title": "Вграден B2B модул",
+    "note": "Ценови групи, достъп само за регистрирани, бързи едрови поръчки и VIES проверка: при 5 от 6 конкуренти това липсва или е скъпа добавка."
+   }
+  ],
+  "advantages": {
+   "Финансово": [
+    "Най-ниска входна цена в групата (14 €/мес.) при включен хостинг, CDN и сигурност PCI-DSS L1",
+    "0% комисиони срещу 0,6–2% при Shopify без Shopify Payments и 2% при Squarespace Basic"
+   ],
+   "Технология": [
+    "Три AI агента в продукта: поддръжка, управление на магазина, клиентски консиерж на витрината: агентна търговия в действие, не обещание",
+    "CloudIO: AI описания (VisionSense от снимки), RankMaster AI SEO на всички планове",
+    "REST и GraphQL API с документация"
+   ]
+  },
+  "gaps": {
+   "Технология": [
+    "Headless е обявен, но не е пуснат; конкурентите (Shopify Hydrogen, BigCommerce) вече продават с него",
+    "Около 160 приложения срещу хиляди при Shopify и Wix",
+    "Няма собствен POS за физическа търговия (Shopify POS, Square, Lightspeed)"
+   ],
+   "Маркетинг": [
+    "Видим обем: Shopify върти 70 000–80 000 Google реклами и постоянно видео, ние: 0 видеа за последните 30 дни и без видими Google реклами (по данни от собствения ни мониторинг)",
+    "Squarespace и BigCommerce публикуват директно сравнително съдържание; никой не отговаря от наша страна"
+   ],
+   "Финансово": [
+    "Лимити на оборота на всеки план принуждават ъпгрейд; Wix и Squarespace нямат такива",
+    "Годишните ни цени са промоция за първата година: при подновяване разликата с конкурентите се свива"
+   ]
+  }
+ }
+}

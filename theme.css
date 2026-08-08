@@ -1,0 +1,534 @@
+/* CloudCart Admin Design System · theme.css
+ * Проект: Демо Магазин
+ * Клиент: без лого · семе #8D58E0 · шрифтова система Montserrat · регистър админ
+ * Генерирано: 08.08.2026 от playground-а на дизайн системата. Версия на системата 1.0, токени tokens/base.json.
+ *
+ * Пуска се както е: няма build стъпка, няма зависимости, няма външни заявки.
+ * Тъмната тема се вдига с data-theme="dark" на <html>, светлата е по подразбиране.
+ *
+ * ШРИФТОВИ ФАЙЛОВЕ. Свалете ги и ги подрежете сами, не ползвайте CDN на Google:
+ *   Montserrat (sans, headings, mono)
+ *     свалете Montserrat[wght].ttf от https://fonts.google.com/specimen/Montserrat · лиценз OFL-1.1
+ *     запишете като /fonts/montserrat-var.woff2  (~95 KB подрязан)
+ *   Командата за подрязване (pyftsubset, пази locl и ssNN): docs/FONT-SYSTEMS.md §3.4
+ */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/montserrat-var.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* --- семе и генерирано семейство (11 стъпки, OKLCH) --- */
+  --seed-brand: #8D58E0;
+  --brand-50: #F6F3FF;
+  --brand-100: #ECE5FF;
+  --brand-200: #DED1FF;
+  --brand-300: #C9B1FF;
+  --brand-400: #AE82FF;
+  --brand-500: #9D67F4;
+  --brand-600: #8D58E0;   /* котва: най-близката стъпка до семето */
+  --brand-700: #7344BB;
+  --brand-800: #603A9A;
+  --brand-900: #503380;
+  --brand-950: #2A1648;
+
+  /* --- основни роли --- */
+  --general-background: #F4F5F9;
+  --general-foreground: #24252D;
+  --general-primary: #7344BB;
+  --general-primary-foreground: #FFFFFF;
+  --general-secondary: #EBEDF4;
+  --general-secondary-foreground: #1A1A2B;
+  --general-accent: #EBEDF4;
+  --general-accent-foreground: #716E94;
+  --general-muted: #EBEDF4;
+  --general-muted-foreground: #585F71;
+  --general-destructive: #E91A19;
+  --general-border: #DBDEEA;
+  --general-input: #FFFFFF;
+
+  /* --- карти --- */
+  --card-card: #FFFFFF;
+  --card-card-foreground: #24252D;
+
+  /* --- изскачащи слоеве --- */
+  --popover-popover: #FFFFFF;
+  --popover-popover-foreground: #24252D;
+
+  /* --- добавени от нас (unofficial) --- */
+  --unofficial-foreground-alt: #716E94;
+  --unofficial-body-background: #FFFFFF;
+  --unofficial-destructive-border: #FC4F4E;
+  --unofficial-destructive-subtle: #FFF1F1;
+  --unofficial-contrast-deprecated: #000000;
+  --unofficial-backdrop: #33415599;
+  --unofficial-mid-deprecated: #9A9BBF;
+  --unofficial-mid-alt: #8380AB;
+  --unofficial-destructive-foreground: #C51110;
+  --unofficial-ghost-foreground: #6D758A;
+  --unofficial-ghost: #FFFFFF00;
+  --unofficial-ghost-hover: #0000000D;
+  --unofficial-primary-hover: #9D67F4;
+  --unofficial-secondary-hover: #F4F5F9;
+  --unofficial-outline: #FFFFFF1A;
+  --unofficial-outline-hover: #33415508;
+  --unofficial-outline-active: #3341550D;
+  --unofficial-accent-0: #F4F5F9;
+  --unofficial-accent-1: #EBEDF4;
+  --unofficial-accent-2: #DBDEEA;
+  --unofficial-accent-3: #C5C9DC;
+  --unofficial-border-0: #F4F5F9;
+  --unofficial-border-1: #EBEDF4;
+  --unofficial-border-3: #C5C9DC;
+  --unofficial-border-4: #AEB1CD;
+  --unofficial-border-5: #9A9BBF;
+  --unofficial-border-primary: #7344BB;
+  --unofficial-success: #D5F6E3;
+  --unofficial-success-foreground: #06281E;
+  --unofficial-warning: #FEF9C3;
+  --unofficial-warning-foreground: #422006;
+  --unofficial-error: #FFE0E0;
+  --unofficial-error-foreground: #490606;
+
+  /* --- фокус --- */
+  --focus-ring: #9D67F4;
+  --focus-ring-error: #FC4F4E;
+
+  /* --- странична лента --- */
+  --sidebar-sidebar: #EBEDF4;
+  --sidebar-sidebar-foreground: #716E94;
+  --sidebar-sidebar-accent: #DBDEEA;
+  --sidebar-sidebar-accent-foreground: #1A1A2B;
+  --sidebar-sidebar-primary: #7344BB;
+  --sidebar-sidebar-primary-foreground: #F4F5F9;
+  --sidebar-sidebar-border: #C5C9DC;
+  --sidebar-sidebar-ring: #9D67F4;
+  --sidebar-unofficial-sidebar-muted: #9A9BBF;
+  --sidebar-unofficial-avatar: #2A1648;
+  --sidebar-unofficial-avatar-foreground: #ECE5FF;
+
+  /* --- графики --- */
+  --chart-legacy-chart-1: #9D67F4;
+  --chart-legacy-chart-2: #FC6665;
+  --chart-legacy-chart-3: #615FFF;
+  --chart-legacy-chart-4: #5D0EC0;
+  --chart-legacy-chart-5: #ED6BFF;
+  --chart-area-orange-fill: #FDD09CB3;
+  --chart-area-orange-fill-2: #F8B07EB3;
+  --chart-area-orange-stroke: #FFB86A;
+  --chart-area-orange-stroke-2: #FF6900;
+  --chart-area-blue-fill: #BFDEFFB3;
+  --chart-area-blue-stroke: #8EC5FF;
+  --chart-area-blue-fill-2: #AACCFFB3;
+  --chart-area-blue-stroke-2: #3F8DFF;
+  --chart-area-green-fill: #B9FBD2B3;
+  --chart-area-green-stroke: #7BF1AB;
+  --chart-area-green-fill-2: #82E2A9B3;
+  --chart-area-green-stroke-2: #19D163;
+  --chart-area-rose-fill: #FFD9DEB3;
+  --chart-area-rose-stroke: #FFA1AD;
+  --chart-area-rose-fill-2: #F491A8B3;
+  --chart-area-rose-stroke-2: #FF4F79;
+  --chart-area-teal-fill: #A9F4E8B3;
+  --chart-area-teal-stroke: #46EDD5;
+  --chart-area-teal-fill-2: #7CE7DCB3;
+  --chart-area-teal-stroke-2: #07C0AC;
+  --chart-area-purple-fill: #F0E0FFB3;
+  --chart-area-purple-stroke: #DAB2FF;
+  --chart-area-purple-fill-2: #DEB5FFB3;
+  --chart-area-purple-stroke-2: #C67EFF;
+  --chart-area-amber-fill: #FFEDACB3;
+  --chart-area-amber-stroke: #FFD230;
+  --chart-area-amber-fill-2: #FED699B3;
+  --chart-area-amber-stroke-2: #FE9A00;
+  --chart-static-blue-1: #8EC5FF;
+  --chart-static-rose-1: #FFA1AD;
+  --chart-static-rose-2: #FF2056;
+  --chart-static-rose-3: #EC003F;
+  --chart-static-rose-4: #C70036;
+  --chart-static-rose-5: #A50036;
+  --chart-static-purple-1: #DAB2FF;
+  --chart-static-purple-2: #AD46FF;
+  --chart-static-purple-3: #9810FA;
+  --chart-static-purple-4: #8200DB;
+  --chart-static-purple-5: #6E11B0;
+  --chart-static-orange-1: #FFB86A;
+  --chart-static-orange-2: #FF6900;
+  --chart-static-orange-3: #F54A00;
+  --chart-static-orange-4: #CA3500;
+  --chart-static-orange-5: #9F2D00;
+  --chart-static-teal-1: #46EDD5;
+  --chart-static-teal-2: #00BBA7;
+  --chart-static-teal-3: #009689;
+  --chart-static-teal-4: #00786F;
+  --chart-static-teal-5: #005F5A;
+  --chart-static-blue-2: #2B7FFF;
+  --chart-static-blue-3: #155DFC;
+  --chart-static-blue-4: #1447E6;
+  --chart-static-blue-5: #193CB8;
+  --chart-static-amber-1: #FFD230;
+  --chart-static-amber-2: #FE9A00;
+  --chart-static-amber-3: #E17100;
+  --chart-static-amber-4: #BB4D00;
+  --chart-static-amber-5: #973C00;
+  --chart-static-green-1: #7BF1A8;
+  --chart-static-green-2: #00C951;
+  --chart-static-green-3: #00A63E;
+  --chart-static-green-4: #008236;
+  --chart-static-green-5: #016630;
+
+  /* --- obra-shadn-docs --- */
+  --obra-shadn-docs-obra-shadcn-ui-docs-1: #FFFFFF;
+  --obra-shadn-docs-obra-shadcn-ui-docs-2: #FFFFFF;
+
+  /* --- разстояния, радиуси, сенки (от tokens/base.json, еднакви за всички продукти) --- */
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-md: 16px;
+  --space-lg: 20px;
+  --space-xl: 24px;
+  --space-2xl: 32px;
+  --space-3xl: 40px;
+  --space-4xl: 48px;
+  --space-5xl: 64px;
+  --space-abs-0: 0px;
+  --space-abs-0-5: 2px;
+  --space-abs-1: 4px;
+  --space-abs-1-5: 6px;
+  --space-abs-2: 8px;
+  --space-abs-2-5: 10px;
+  --space-abs-3: 12px;
+  --space-abs-3-5: 14px;
+  --space-abs-4: 16px;
+  --space-abs-5: 20px;
+  --space-abs-6: 24px;
+  --space-abs-7: 28px;
+  --space-abs-8: 32px;
+  --space-abs-9: 36px;
+  --space-abs-10: 40px;
+  --space-abs-11: 44px;
+  --space-abs-12: 48px;
+  --space-abs-14: 56px;
+  --space-abs-16: 64px;
+  --space-abs-20: 80px;
+  --space-abs-24: 96px;
+  --space-abs-28: 112px;
+  --space-abs-32: 128px;
+  --space-abs-36: 144px;
+  --space-abs-40: 160px;
+  --space-abs-44: 176px;
+  --space-abs-48: 192px;
+  --space-abs-52: 208px;
+  --space-abs-56: 224px;
+  --space-abs-60: 240px;
+  --space-abs-64: 256px;
+  --space-abs-72: 288px;
+  --space-abs-80: 320px;
+  --space-abs-96: 384px;
+  --space-abs-infinite: 9999px;
+  --radius-none: 0px;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+  --radius-full: 9999px;
+  --shadow-2xs: 0px 1px 0px 0px #1A1A2B0D;
+  --shadow-xs: 0px 1px 2px 0px #1A1A2B0D;
+  --shadow-sm: 0px 1px 3px 0px #1A1A2B1A,0px 1px 2px -1px #1A1A2B1A;
+  --shadow-md: 0px 4px 6px -1px #1A1A2B1A,0px 2px 4px -2px #1A1A2B1A;
+  --shadow-lg: 0px 10px 15px -3px #1A1A2B1A,0px 4px -4px 6px #1A1A2B1A;
+  --shadow-xl: 0px 20px 25px -5px #1A1A2B1A,0px 8px -6px 10px #1A1A2B1A;
+  --shadow-2xl: 0px 25px 50px 12px #1A1A2B40;
+
+  /* --- типография: Montserrat, регистър админ --- */
+  --font-sans: "Montserrat", system-ui, sans-serif;
+  --font-headings: "Montserrat", var(--font-sans);
+  --font-mono: "Montserrat", system-ui, sans-serif;
+  --fs-micro: 11px;
+  --lh-micro: 16px;
+  --fw-micro: 600;
+  --ls-micro: 0.44px;
+  --fs-caption: 11px;
+  --lh-caption: 16px;
+  --fw-caption: 400;
+  --ls-caption: 0px;
+  --fs-body-sm: 12px;
+  --lh-body-sm: 18px;
+  --fw-body-sm: 400;
+  --ls-body-sm: 0px;
+  --fs-body: 13px;
+  --lh-body: 20px;
+  --fw-body: 400;
+  --ls-body: 0px;
+  --fs-input: 14px;
+  --lh-input: 20px;
+  --fw-input: 400;
+  --ls-input: 0px;
+  --fs-th: 11px;
+  --lh-th: 15px;
+  --fw-th: 600;
+  --ls-th: 0.33px;
+  --fs-h1: 31px;
+  --lh-h1: 37px;
+  --fw-h1: 700;
+  --ls-h1: 0px;
+  --fs-h2: 24px;
+  --lh-h2: 31px;
+  --fw-h2: 600;
+  --ls-h2: 0px;
+  --fs-h3: 19px;
+  --lh-h3: 27px;
+  --fw-h3: 600;
+  --ls-h3: 0px;
+  --fs-h4: 15px;
+  --lh-h4: 22px;
+  --fw-h4: 600;
+  --ls-h4: 0px;
+  --fs-h5: 14px;
+  --lh-h5: 21px;
+  --fw-h5: 600;
+  --ls-h5: 0px;
+  --fs-mono: 12px;
+  --lh-mono: 18px;
+  --fw-mono: 400;
+  --ls-mono: 0px;
+  --fs-metric: 26px;
+  --lh-metric: 30px;
+  --fw-metric: 600;
+  --ls-metric: 0px;
+  --font-th: var(--font-sans);
+  --fs-body-phone: max(15px, 13px);
+  --logo-h: 32px;
+
+  /* --- движение (DESIGN-BRIEF §2) --- */
+  --dur-fast: 100ms;
+  --dur-base: 160ms;
+  --dur-slow: 240ms;
+  --ease: cubic-bezier(0.19, 0.91, 0.38, 1);
+
+  /* --- плътност на таблиците: превключвателят в лентата сменя само --row-h.
+     --row-h е под (в таблица height действа като min-height), а --row-pad-y е
+     вертикалното поле на клетката: ред с два реда съдържание расте и диша,
+     вместо съдържанието да опре в ръба. --- */
+  --row-h: 44px;
+  --row-pad-y: 6px;
+}
+
+/* Тъмната тема е преизчислена, не обърната. Всеки тон има своя стойност. */
+[data-theme="dark"] {
+  /* --- основни роли --- */
+  --general-background: #0A0A14;
+  --general-foreground: #F7F8F8;
+  --general-primary: #AE82FF;
+  --general-primary-foreground: #1A1A2B;
+  --general-secondary: #34314E;
+  --general-secondary-foreground: #EBEDF4;
+  --general-accent: #34314E;
+  --general-accent-foreground: #C5C9DC;
+  --general-muted: #1A1A2B;
+  --general-muted-foreground: #8C93A4;
+  --general-destructive: #FF6867;
+  --general-border: #34314E;
+  --general-input: #FFFFFF0D;
+
+  /* --- карти --- */
+  --card-card: #1A1A2B;
+  --card-card-foreground: #F7F8F8;
+
+  /* --- изскачащи слоеве --- */
+  --popover-popover: #1A1A2B;
+  --popover-popover-foreground: #F7F8F8;
+
+  /* --- добавени от нас (unofficial) --- */
+  --unofficial-foreground-alt: #C5C9DC;
+  --unofficial-body-background: #0A0A14;
+  --unofficial-destructive-border: #FC4F4E;
+  --unofficial-destructive-subtle: #490606;
+  --unofficial-contrast-deprecated: #FFFFFF;
+  --unofficial-backdrop: #00000099;
+  --unofficial-mid-deprecated: #9A9BBF;
+  --unofficial-mid-alt: #AEB1CD;
+  --unofficial-destructive-foreground: #FF6867;
+  --unofficial-ghost-foreground: #DBDEEA;
+  --unofficial-ghost: #FFFFFF00;
+  --unofficial-ghost-hover: #FFFFFF1A;
+  --unofficial-primary-hover: #C9B1FF;
+  --unofficial-secondary-hover: #1A1A2B;
+  --unofficial-outline: #FFFFFF0D;
+  --unofficial-outline-hover: #FFFFFF1A;
+  --unofficial-outline-active: #FFFFFF26;
+  --unofficial-accent-0: #34314E;
+  --unofficial-accent-1: #1A1A2B;
+  --unofficial-accent-2: #34314E;
+  --unofficial-accent-3: #716E94;
+  --unofficial-border-0: #0A0A14;
+  --unofficial-border-1: #1A1A2B;
+  --unofficial-border-3: #716E94;
+  --unofficial-border-4: #8380AB;
+  --unofficial-border-5: #9A9BBF;
+  --unofficial-border-primary: #AE82FF;
+  --unofficial-success: #7BDAAD;
+  --unofficial-success-foreground: #06281E;
+  --unofficial-warning: #FEF08A;
+  --unofficial-warning-foreground: #422006;
+  --unofficial-error: #FFA09F;
+  --unofficial-error-foreground: #490606;
+
+  /* --- фокус --- */
+  --focus-ring: #C9B1FF;
+  --focus-ring-error: #FF6867;
+
+  /* --- странична лента --- */
+  --sidebar-sidebar: #1A1A2B;
+  --sidebar-sidebar-foreground: #C5C9DC;
+  --sidebar-sidebar-accent: #34314E;
+  --sidebar-sidebar-accent-foreground: #EBEDF4;
+  --sidebar-sidebar-primary: #AE82FF;
+  --sidebar-sidebar-primary-foreground: #1A1A2B;
+  --sidebar-sidebar-border: #34314E;
+  --sidebar-sidebar-ring: #C9B1FF;
+  --sidebar-unofficial-sidebar-muted: #9A9BBF;
+  --sidebar-unofficial-avatar: #C9B1FF;
+  --sidebar-unofficial-avatar-foreground: #2A1648;
+
+  /* --- графики --- */
+  --chart-legacy-chart-1: #AE82FF;
+  --chart-legacy-chart-2: #E56867;
+  --chart-legacy-chart-3: #5558F2;
+  --chart-legacy-chart-4: #682DB2;
+  --chart-legacy-chart-5: #C84CD9;
+  --chart-area-orange-fill: #755738B3;
+  --chart-area-orange-fill-2: #76380EB3;
+  --chart-area-orange-stroke: #FFB86A;
+  --chart-area-orange-stroke-2: #FF7915;
+  --chart-area-blue-fill: #475D75B3;
+  --chart-area-blue-stroke: #8EC5FF;
+  --chart-area-blue-fill-2: #1F4176B3;
+  --chart-area-blue-stroke-2: #539BFF;
+  --chart-area-green-fill: #3F6E51B3;
+  --chart-area-green-stroke: #7BF1A8;
+  --chart-area-green-fill-2: #0E5E2EB3;
+  --chart-area-green-stroke-2: #19D163;
+  --chart-area-rose-fill: #754E53B3;
+  --chart-area-rose-stroke: #FFA1AD;
+  --chart-area-rose-fill-2: #741B30B3;
+  --chart-area-rose-stroke-2: #FF4670;
+  --chart-area-teal-fill: #409388B3;
+  --chart-area-teal-stroke: #46EDD5;
+  --chart-area-teal-fill-2: #0E5951B3;
+  --chart-area-teal-stroke-2: #1CCFB9;
+  --chart-area-purple-fill: #655576B3;
+  --chart-area-purple-stroke: #DAB2FF;
+  --chart-area-purple-fill-2: #532A77B3;
+  --chart-area-purple-stroke-2: #A96ADD;
+  --chart-area-amber-fill: #746221B3;
+  --chart-area-amber-stroke: #FFD230;
+  --chart-area-amber-fill-2: #734B0EB3;
+  --chart-area-amber-stroke-2: #FFA50A;
+  --chart-static-blue-1: #8EC5FF;
+  --chart-static-rose-1: #FFA1AD;
+  --chart-static-rose-2: #FF2056;
+  --chart-static-rose-3: #EC003F;
+  --chart-static-rose-4: #C70036;
+  --chart-static-rose-5: #A50036;
+  --chart-static-purple-1: #DAB2FF;
+  --chart-static-purple-2: #AD46FF;
+  --chart-static-purple-3: #9810FA;
+  --chart-static-purple-4: #8200DB;
+  --chart-static-purple-5: #6E11B0;
+  --chart-static-orange-1: #FFB86A;
+  --chart-static-orange-2: #FF6900;
+  --chart-static-orange-3: #F54A00;
+  --chart-static-orange-4: #CA3500;
+  --chart-static-orange-5: #9F2D00;
+  --chart-static-teal-1: #46EDD5;
+  --chart-static-teal-2: #00BBA7;
+  --chart-static-teal-3: #009689;
+  --chart-static-teal-4: #00786F;
+  --chart-static-teal-5: #005F5A;
+  --chart-static-blue-2: #2B7FFF;
+  --chart-static-blue-3: #155DFC;
+  --chart-static-blue-4: #1447E6;
+  --chart-static-blue-5: #193CB8;
+  --chart-static-amber-1: #FFD230;
+  --chart-static-amber-2: #FE9A00;
+  --chart-static-amber-3: #E17100;
+  --chart-static-amber-4: #BB4D00;
+  --chart-static-amber-5: #973C00;
+  --chart-static-green-1: #7BF1A8;
+  --chart-static-green-2: #00C951;
+  --chart-static-green-3: #00A63E;
+  --chart-static-green-4: #008236;
+  --chart-static-green-5: #016630;
+
+  /* --- obra-shadn-docs --- */
+  --obra-shadn-docs-obra-shadcn-ui-docs-1: #111628;
+  --obra-shadn-docs-obra-shadcn-ui-docs-2: #201D1B;
+}
+
+/* --- основа. Дотук са само стойности; оттук нататък са трите правила,
+   които всеки продукт на системата дължи. --- */
+
+html {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--general-foreground);
+  background: var(--general-background);
+  /* задължително: иначе цените в колона подскачат */
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+:is(h1, h2, h3, h4, h5) { font-family: var(--font-headings); }
+h1 { font-size: var(--fs-h1); line-height: var(--lh-h1); font-weight: var(--fw-h1); letter-spacing: var(--ls-h1); }
+h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); font-weight: var(--fw-h2); letter-spacing: var(--ls-h2); }
+h3 { font-size: var(--fs-h3); line-height: var(--lh-h3); font-weight: var(--fw-h3); letter-spacing: var(--ls-h3); }
+h4 { font-size: var(--fs-h4); line-height: var(--lh-h4); font-weight: var(--fw-h4); }
+h5 { font-size: var(--fs-h5); line-height: var(--lh-h5); font-weight: var(--fw-h5); }
+
+/* данните живеят без лигатури: „->“ и „!=“ вътре в SKU трябва да оцелеят */
+:is(td, th, .sku, .mono, input, code, .num) {
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "calt" 0, "dlig" 0;
+}
+.mono, .sku, code { font-family: var(--font-mono); font-style: normal; }
+
+/* една идиома за фокус, навсякъде, без изключения */
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* отвореният списък на select е на системата, не на ОС (Chrome 135+;
+   по-стар браузър тихо остава на родния изглед) */
+select, ::picker(select) { appearance: base-select; }
+/* base-select маха родното центриране: бутонът е флекс кутия */
+select { display: inline-flex; align-items: center; }
+::picker(select) {
+  margin-top: 4px;
+  background: var(--popover-popover);
+  color: var(--popover-popover-foreground);
+  border: 1px solid var(--general-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 4px;
+}
+option { display: flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: var(--radius-sm); }
+option:hover, option:focus { background: var(--unofficial-accent-0); }
+option:checked { color: var(--general-primary); font-weight: 600; }
+select::picker-icon { margin-left: auto; color: var(--general-muted-foreground); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
