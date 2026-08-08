@@ -108,6 +108,7 @@ def main():
     write("availability.html", db.build_availability_dash(status))
     write("activity.html", db.build_activity_dash(items, args.days, problems))
     write("social.html", db.build_social_dash(social))
+    write("saved.html", db.build_saved_page())
     write("sources.html", db.build_sources_dash(trouble, hist_dates, args.days))
     write("digest.html", em.render(items, problems, args.days))
 

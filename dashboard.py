@@ -29,9 +29,31 @@ from report_style import admin_shell, bg_dt, bg_num, bg_when, shell
 NAME_MAP = {"Wix eCommerce": "Wix"}   # имена от pricing_monitor -> платформа
 
 NAV = [("index.html", "Табло"), ("pricing.html", "Цени"),
-       ("features.html", "Функции"), ("availability.html", "Наличност"),
+       ("features.html", "Функционалности"), ("availability.html", "Наличност"),
        ("activity.html", "Пазарна активност"),
-       ("social.html", "Социални и реклами"), ("sources.html", "Източници")]
+       ("social.html", "Социални и реклами"),
+       ("saved.html", "Запазени"), ("sources.html", "Източници")]
+
+_BOOKMARK = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+             'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
+             '<path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 '
+             '2 2v16z"/></svg>')
+
+# Запазените публикации живеят в localStorage на браузъра (страниците се
+# прегенерират всеки ден, затова бутонът снима картичката при запазване).
+FAV_JS = """
+function ccFavs(){try{return JSON.parse(localStorage.getItem('cc-favs')||'{}')}
+catch(e){return {}}}
+function ccFavsSave(f){try{localStorage.setItem('cc-favs',
+JSON.stringify(f))}catch(e){}}
+document.querySelectorAll('.favbtn[data-fav]').forEach(function(b){
+var d;try{d=JSON.parse(b.dataset.fav)}catch(e){return}
+function paint(){b.classList.toggle('on',!!ccFavs()[d.u]);
+b.title=ccFavs()[d.u]?'Премахни от запазените':'Запази за по-късно';}
+b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();
+var f=ccFavs();if(f[d.u]){delete f[d.u]}else{d.ts=Date.now();f[d.u]=d}
+ccFavsSave(f);paint();});paint();});
+"""
 
 EMPTY = "–"     # празна клетка по конвенцията на системата
 
@@ -114,7 +136,12 @@ def news_card(it, show_score=False):
     new = "<span class=newmark>НОВО</span>" if is_fresh(it) else ""
     score = (f"<span class=score>приоритет {it.get('score', 0)}</span>"
              if show_score and it.get("score") else "")
-    return (f"<div class=card data-tags='{item_tags(it)}'>{score}{new}"
+    fav = json.dumps({"u": it["link"], "t": it["title"],
+                      "s": it["source"], "d": d,
+                      "g": it["signals"]}, ensure_ascii=False)
+    favbtn = (f"<button type=button class=favbtn "
+              f"data-fav=\"{esc(fav)}\">{_BOOKMARK}</button>")
+    return (f"<div class=card data-tags='{item_tags(it)}'>{favbtn}{score}{new}"
             f"<a href='{esc(it['link'])}' target=_blank>{esc(it['title'])}"
             f"</a>{('<div>' + sig + '</div>') if sig else ''}"
             f"<div class=row><span class=src>{esc(it['source'])}</span>"
@@ -336,7 +363,8 @@ def build_overview(items, results, days, plans, plan_changes, status, social):
                "промени и сривове.</div>"))
     return admin_shell("Табло",
                        f"{bg_dt()} ч. · статус на живо · дневно събиране",
-                       NAV, body, extra_js=live_status_js(status) + SORT_JS,
+                       NAV, body,
+                       extra_js=live_status_js(status) + SORT_JS + FAV_JS,
                        active="index.html")
 
 
@@ -565,7 +593,7 @@ var open=d.style.display!=='none';
 d.style.display=open?'none':'';
 r.classList.toggle('open',!open);});});
 """
-    return admin_shell("Функции",
+    return admin_shell("Функционалности",
                        f"{bg_dt()} ч. · проверени срещу официалните страници",
                        NAV, "".join(body), extra_js=features_js,
                        active="features.html")
@@ -683,7 +711,7 @@ def build_activity_dash(items, days, problems):
                        f"{bg_dt()} ч. · подредено по приоритет · дневници на "
                        f"платформите, браншова преса и общности · последни "
                        f"{days} дни", NAV,
-                       "".join(body), extra_js=FILTER_JS,
+                       "".join(body), extra_js=FILTER_JS + FAV_JS,
                        active="activity.html")
 
 
@@ -750,6 +778,54 @@ def build_social_dash(social):
 
 
 # --------------------------------------------------------------------------
+# Запазени публикации (изцяло от localStorage; страницата е статична)
+# --------------------------------------------------------------------------
+def build_saved_page():
+    saved_js = """
+var box=document.getElementById('savedlist');
+function render(){
+var f=ccFavs(),arr=Object.keys(f).map(function(k){return f[k]})
+.sort(function(a,b){return (b.ts||0)-(a.ts||0)});
+document.getElementById('savedcount').textContent=arr.length;
+box.textContent='';
+if(!arr.length){var e=document.createElement('div');e.className='empty';
+e.textContent='Няма запазени публикации. Отбележете със знака за '+
+'запазване върху която и да е картичка в „Табло“ или „Пазарна активност“.';
+box.appendChild(e);return;}
+arr.forEach(function(d){
+var c=document.createElement('div');c.className='card';
+var rm=document.createElement('button');rm.className='favbtn on';
+rm.title='Премахни от запазените';
+rm.innerHTML=%s;
+rm.addEventListener('click',function(){var f=ccFavs();delete f[d.u];
+ccFavsSave(f);render();});
+c.appendChild(rm);
+var a=document.createElement('a');a.href=d.u;a.target='_blank';
+a.textContent=d.t;c.appendChild(a);
+if(d.g&&d.g.length){var gs=document.createElement('div');
+d.g.forEach(function(s){var sp=document.createElement('span');
+sp.className='sig';sp.textContent=s;gs.appendChild(sp);});c.appendChild(gs);}
+var r=document.createElement('div');r.className='row';
+var s1=document.createElement('span');s1.className='src';s1.textContent=d.s;
+var s2=document.createElement('span');
+s2.textContent=(d.d||'')+' · запазено '+new Date(d.ts||0)
+.toLocaleDateString('bg-BG');
+r.appendChild(s1);r.appendChild(s2);c.appendChild(r);
+box.appendChild(c);});}
+render();
+""" % json.dumps(_BOOKMARK)
+    body = (kpi_row([("<span id=savedcount>0</span>", "запазени публикации",
+                      False)])
+            + "<h2>За четене по-късно</h2><div id=savedlist></div>"
+            "<div class=basis>Запазените се пазят локално в този браузър "
+            "(localStorage), затова остават и след като публикацията излезе "
+            "от 7-дневния прозорец на потока. Друг браузър или устройство "
+            "има свой собствен списък.</div>")
+    return admin_shell("Запазени", "лично, само в този браузър", NAV, body,
+                       extra_js=FAV_JS + saved_js, active="saved.html")
+
+
+# --------------------------------------------------------------------------
 # Източници и методика
 # --------------------------------------------------------------------------
 def build_sources_dash(trouble, hist_dates, days):
@@ -787,7 +863,7 @@ RSS и Atom от дневниците на платформите, браншо�
 прозрачност на Google (брой активни реклами), Библиотека с реклами на Meta
 (връзки; обхват в ЕС по държави в интерфейса на Meta, програмно с
 METAAD_TOKEN).</div></div>
-<div class=card><span class=name>Функции</span><div class=sub>
+<div class=card><span class=name>Функционалности</span><div class=sub>
 Матрицата на възможностите е изследвана срещу официалните страници на
 платформите и проверена от независим агент; всяка клетка носи източник.
 </div></div>

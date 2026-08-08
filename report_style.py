@@ -281,6 +281,13 @@ transition:background var(--dur-fast) var(--ease),color var(--dur-fast) var(--ea
 .chip:hover{background:var(--ghost-hover);color:var(--fg)}
 .chip.on{background:var(--primary-soft);color:var(--primary);
 border-color:transparent}
+/* ---------- запазване за по-късно (bookmark; локално в браузъра) ------- */
+.favbtn{float:right;background:transparent;border:none;cursor:pointer;
+color:var(--mid);padding:2px 4px;margin-left:8px;line-height:1}
+.favbtn:hover{color:var(--fg)}
+.favbtn.on{color:var(--primary)}
+.favbtn svg{width:16px;height:16px;vertical-align:middle}
+.favbtn.on svg{fill:currentColor}
 .newmark{display:inline-block;font-size:12px;line-height:17px;font-weight:600;
 letter-spacing:.44px;color:var(--ok-fg);background:var(--ok-bg);
 border-radius:var(--r-xs);padding:1px 6px;margin-right:6px}
