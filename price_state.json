@@ -18,7 +18,7 @@
       "$1,499",
       "$33,333"
     ],
-    "checked": "2026-08-08T15:32:15"
+    "checked": "2026-08-08T15:46:01"
   },
   "https://www.ecwid.com/pricing": {
     "name": "Ecwid",
@@ -32,7 +32,7 @@
       "6399€",
       "7799€"
     ],
-    "checked": "2026-08-08T15:32:15"
+    "checked": "2026-08-08T15:46:01"
   },
   "https://www.shopify.com/bg/pricing": {
     "name": "Shopify",
@@ -58,7 +58,7 @@
       "8500€",
       "12000€"
     ],
-    "checked": "2026-08-08T15:32:15"
+    "checked": "2026-08-08T15:46:01"
   },
   "https://www.squarespace.com/pricing": {
     "name": "Squarespace",
@@ -70,7 +70,7 @@
       "€168",
       "€252"
     ],
-    "checked": "2026-08-08T15:32:15"
+    "checked": "2026-08-08T15:46:01"
   },
   "https://www.shift4shop.com/pricing.htm": {
     "name": "Shift4Shop",
@@ -81,7 +81,7 @@
       "$299",
       "$2,000"
     ],
-    "checked": "2026-08-08T15:32:15"
+    "checked": "2026-08-08T15:46:01"
   },
   "https://www.wix.com/plans": {
     "name": "Wix eCommerce",
@@ -92,7 +92,7 @@
       "$39",
       "$159"
     ],
-    "checked": "2026-08-08T15:32:15"
+    "checked": "2026-08-08T15:46:01"
   },
   "_plans": {
     "vendors": {
@@ -228,6 +228,25 @@
           }
         ]
       },
+      "WooCommerce": {
+        "url": "https://woocommerce.com/pricing/",
+        "plans": [
+          {
+            "name": "Woo Core",
+            "monthly": 0.0,
+            "annual": null,
+            "currency": "EUR",
+            "note": "безплатен GPL софтуер; хостинг, домейн и разширения се плащат отделно"
+          },
+          {
+            "name": "Реална издръжка",
+            "monthly": null,
+            "annual": null,
+            "currency": "EUR",
+            "note": "≈ 30–75 €/мес. за малък магазин: managed хостинг 18–45 €, WPML 99 €/г., B2B 157 €/г.; WooPayments 1,5% + 0,25 €"
+          }
+        ]
+      },
       "Squarespace": {
         "url": "https://www.squarespace.com/pricing",
         "plans": [
@@ -307,6 +326,6 @@
         ]
       }
     },
-    "checked": "2026-08-08T15:32:22"
+    "checked": "2026-08-08T15:46:09"
   }
 }
