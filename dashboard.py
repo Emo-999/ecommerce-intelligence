@@ -703,9 +703,10 @@ def build_activity_dash(items, days, problems):
     for it in ranked:
         body.append(news_card(it, show_score=True))
     body.append("</div>")
-    if problems:
+    broken = [p for p in problems if "работи, но" not in p]
+    if broken:
         body.append("<div class=warn><b>ИЗТОЧНИЦИ ЗА ПРОВЕРКА</b><ul>"
-                    + "".join(f"<li>{esc(p)}</li>" for p in problems)
+                    + "".join(f"<li>{esc(p)}</li>" for p in broken)
                     + "</ul></div>")
     return admin_shell("Пазарна активност",
                        f"{bg_dt()} ч. · подредено по приоритет · дневници на "
@@ -831,16 +832,27 @@ render();
 def build_sources_dash(trouble, hist_dates, days):
     kpis = kpi_row([
         (len(hist_dates), "дни история", False),
-        (len(trouble), "източници за преглед", bool(trouble)),
+        (len([t for t in trouble if "работи, но" not in t]),
+         "източници за преглед", bool([t for t in trouble if "работи, но" not in t])),
         ("06:00 UTC", "дневно събиране (CI)", False),
     ])
+    quiet = [t for t in trouble if "работи, но" in t]
+    broken = [t for t in trouble if "работи, но" not in t]
     body = [kpis, "<h2>Здраве на източниците при това събиране</h2>"]
-    if trouble:
+    if broken:
         body.append("<div class=warn><b>ИЗТОЧНИЦИ ЗА ПРОВЕРКА</b><ul>"
-                    + "".join(f"<li>{esc(t)}</li>" for t in trouble)
+                    + "".join(f"<li>{esc(t)}</li>" for t in broken)
                     + "</ul></div>")
     else:
-        body.append("<div class=empty>Всички източници са здрави.</div>")
+        body.append("<div class=empty>Няма повредени източници.</div>")
+    if quiet:
+        body.append("<h2>Тихи източници</h2><div class=basis>Тези канали "
+                    "отговарят нормално, просто нямат публикация в прозореца "
+                    "на събиране. Не изискват действие: нискочестотните "
+                    "(месечни издания, GitHub releases) се появяват тук "
+                    "редовно.</div>"
+                    + "".join(f"<div class=sub>• {esc(t)}</div>"
+                              for t in quiet))
     body.append("""
 <h2>Какво се следи и как</h2>
 <div class=card><span class=name>Цени на планове</span><div class=sub>

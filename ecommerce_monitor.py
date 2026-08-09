@@ -242,13 +242,13 @@ def fetch(sources, days):
         try:
             feed = _parse_feed(url)
         except Exception as exc:                      # network / parse blow-up
-            problems.append(f"{name}: {exc}")
+            problems.append(f"{name}: грешка: {exc}")
             continue
         if getattr(feed, "bozo", 0) and not feed.entries:
-            problems.append(f"{name}: unreadable or empty ({url})")
+            problems.append(f"{name}: нечетим или празен ({url})")
             continue
         if not feed.entries:
-            problems.append(f"{name}: no entries ({url})")
+            problems.append(f"{name}: без записи ({url})")
             continue
 
         kept = 0
@@ -282,7 +282,7 @@ def fetch(sources, days):
             })
             kept += 1
         if kept == 0:
-            problems.append(f"{name}: reachable but nothing in the last {days}d")
+            problems.append(f"{name}: работи, но без нови публикации от {days} дни")
 
     items.sort(key=lambda x: x["date"] or dt.datetime.min, reverse=True)
     return items, problems
