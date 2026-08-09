@@ -280,7 +280,7 @@ border-radius:var(--r-md);color:var(--side-fg);font:inherit;font-size:12px;
 font-weight:600;cursor:pointer}
 .themebtn:hover{background:var(--ghost-hover)}
 .themebtn svg{width:13px;height:13px}
-.main{flex:1;min-width:0;max-width:1280px;padding:24px 24px 80px}
+.main{flex:1;min-width:0;max-width:1760px;padding:24px 32px 80px}
 .page-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;
 margin-bottom:16px}
 .page-head h1{font-size:28px;line-height:36px;font-weight:600}
@@ -426,6 +426,11 @@ border-color:transparent}
 .logo-d{display:none}
 [data-theme="dark"] .logo-l{display:none}
 [data-theme="dark"] .logo-d{display:block}
+@media(min-width:1100px){
+.filterable,#savedlist{display:grid;
+grid-template-columns:repeat(auto-fill,minmax(520px,1fr));gap:8px;
+align-items:start}
+.filterable .card,#savedlist .card{margin-bottom:0}}
 /* ---------- запазване за по-късно (bookmark; локално в браузъра) ------- */
 .favbtn{float:right;background:transparent;border:none;cursor:pointer;
 color:var(--mid);padding:2px 4px;margin-left:8px;line-height:1}
