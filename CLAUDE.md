@@ -180,7 +180,7 @@ snapshot — consider a CI step that redeploys after each weekly run.
 - Reddit rate-limits unauthenticated RSS to ~1 request/10s per IP —
   _parse_feed() sleeps 15s before each reddit fetch and retries twice
   (30s/60s); expect an occasional "no entries" self-report anyway.
-- Source universe (~60 feeds, all live-verified 2026-08-08): platform
+- Source universe (~69 feeds, all live-verified 2026-08-08/10): platform
   changelogs + vendor blogs/newsrooms, EU + payments press, Bulgarian media
   (Капитал, Economic.bg, Regal.bg, БЕА), merchant forums (wp.org Woo
   support/reviews, Shopify Community Discourse latest.rss), 11 subreddits,
@@ -190,6 +190,28 @@ snapshot — consider a CI step that redeploys after each weekly run.
   commercetools/Adobe blogs (no RSS), Squarespace forum (Cloudflare wall),
   Ecwid blog (stale since 2026-03). Finextra event items carry FUTURE
   dates — fetch() nulls dates >24h ahead so they can't outrank real news.
+- **Newsletter category** (added 2026-08-10, at the user's request after a
+  Linas's Newsletter issue on Cloudflare's agent-payments stack): a fourth
+  category next to Platform/Industry/Community — analyst bulletins where the
+  news arrives already interpreted. Five feeds: Linas's Newsletter
+  (linas.substack.com — FinTech & AI is Eating the World), Shopifreaks
+  (weekly e-commerce roundup), Stratechery (free feed; bodies partly
+  paywalled — headlines are the value), Fintech Business Weekly, Exponential
+  View. CATEGORY_BOOST = 2, same as Platform: curated analysis outranks raw
+  press. Alongside them, four "agentic-commerce rails" feeds went into
+  Industry: Cloudflare `/tag/agents/rss/` (the TAG feed, not the whole blog —
+  the full blog is mostly network engineering; the agents tag is the WebMCP /
+  agent-payments story, relevant to the webmcp/ pilot), Stripe blog (~1
+  post/month — expect it in "тихи източници" most days, that's not a break),
+  OpenAI news (feed carries ~1100 entries; the days-window filter handles it),
+  Payments Dive. Adding a category touches exactly 4 places: SOURCES,
+  CATEGORY_BOOST, the render() loop+labels in ecommerce_monitor.py, and
+  dashboard.item_tags + the chip list.
+  NEWSLETTER DEAD ENDS (checked 2026-08-10, all 404/403/stale — don't re-add):
+  Fintech Brainfood (no public RSS on any host), This Week in Fintech,
+  Future Commerce, a16z, Anthropic news, DTC Newsletter, Chew On This,
+  Retail Brew + Ecommerce Fastlane (403 bot wall), Fintech Takes (feed frozen
+  at 2022), 2PM (members-only, last public post 2026-07).
 - Trustpilot ratings CANNOT be scraped plainly (AWS WAF JS challenge on all
   profiles incl. TLS impersonation). Partial live route that works:
   widget.trustpilot.com/trustbox-data/... businessUnit JSON (trustScore,

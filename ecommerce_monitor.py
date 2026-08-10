@@ -49,7 +49,7 @@ from report_style import shell, utcnow
 
 # --------------------------------------------------------------------------
 # SOURCES  ->  (display name, feed url, category)
-# category is just for grouping in the digest: "Platform" or "Industry".
+# category groups the digest: "Platform", "Newsletter", "Industry", "Community".
 # Edit freely. Tags in [brackets] are notes to you, not used by the code.
 # --------------------------------------------------------------------------
 SOURCES = [
@@ -101,6 +101,22 @@ SOURCES = [
     ("Regal.bg",              "https://www.regal.bg/rss/", "Industry"),
     ("БЕА (e-commerce асоциация)", "https://beabg.com/feed/", "Industry"),
     ("Netokracija",           "https://www.netokracija.com/feed", "Industry"),
+    # -- инфраструктурата на agentic commerce (кой строи релсите, по които
+    #    агентите плащат), live-verified 2026-08-10 -------------------------
+    ("Cloudflare — Agents",   "https://blog.cloudflare.com/tag/agents/rss/", "Industry"),  # tag feed, не целият блог
+    ("Stripe — Blog",         "https://stripe.com/blog/feed.rss", "Industry"),
+    ("OpenAI — News",         "https://openai.com/news/rss.xml", "Industry"),
+    ("Payments Dive",         "https://www.paymentsdive.com/feeds/news/", "Industry"),
+
+    # ---- Бюлетини и анализи ----------------------------------------------
+    # Аналитични бюлетини (fintech + AI + търговия). Тук новината идва
+    # осмислена — какво означава ходът, не само че се е случил.
+    # Live-verified 2026-08-10.
+    ("Linas's Newsletter",    "https://linas.substack.com/feed", "Newsletter"),          # FinTech & AI is Eating the World
+    ("Shopifreaks",           "https://shopifreaks.com/feed/", "Newsletter"),            # седмичен e-commerce обзор
+    ("Stratechery",           "https://stratechery.com/feed/", "Newsletter"),            # безплатният поток; част от текста е зад стена
+    ("Fintech Business Weekly", "https://fintechbusinessweekly.substack.com/feed", "Newsletter"),
+    ("Exponential View",      "https://www.exponentialview.co/feed", "Newsletter"),
 
     # ---- Communities (merchants talking about these platforms daily) -----
     # Reddit rate-limits hard: _parse_feed() spaces these out and retries.
@@ -178,7 +194,7 @@ SIGNAL_WEIGHTS = {
     "pos": 2, "b2b": 2, "wholesale": 2, "headless": 2,
     "tax": 1, "shipping": 1, "fulfillment": 1, "graphql": 1, "api": 1,
 }
-CATEGORY_BOOST = {"Platform": 2, "Community": 1, "Industry": 0}
+CATEGORY_BOOST = {"Platform": 2, "Newsletter": 2, "Community": 1, "Industry": 0}
 
 
 def _score(signals, category, when):
@@ -302,9 +318,10 @@ def render(items, problems, days):
                 f"{len({i['source'] for i in items})} източника")
     out = []
 
-    for cat in ("Platform", "Industry", "Community"):
+    for cat in ("Platform", "Newsletter", "Industry", "Community"):
         rows = by_cat.get(cat, [])
         label = {"Platform": "Конкурентни платформи",
+                 "Newsletter": "Бюлетини и анализи",
                  "Industry": "Новини от бранша",
                  "Community": "Пулс на общността"}[cat]
         out.append(f"<h2>{label} &mdash; {len(rows)}</h2>")

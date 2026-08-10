@@ -118,6 +118,7 @@ def item_tags(it):
     tags = [slug for slug, _, sigs in THEMES
             if sigs & set(it.get("signals") or [])]
     tags.append({"Community": "community", "Platform": "platform",
+                 "Newsletter": "newsletter",
                  "Industry": "press"}.get(it.get("category"), "press"))
     if (it.get("score") or 0) >= PRIO_SCORE:
         tags.append("prio")
@@ -689,7 +690,7 @@ def build_activity_dash(items, days, problems):
         chips.append(f"<button type=button class=chip data-tag={slug} "
                      f"data-group=theme>{label}</button>")
     for slug, label in (("community", "Общности"), ("platform", "Платформи"),
-                        ("press", "Преса")):
+                        ("newsletter", "Бюлетини"), ("press", "Преса")):
         chips.append(f"<button type=button class=chip data-tag={slug} "
                      f"data-group=src>{label}</button>")
     chips.append("</div>")
