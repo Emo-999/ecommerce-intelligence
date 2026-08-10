@@ -18,7 +18,7 @@
       "$1,499",
       "$33,333"
     ],
-    "checked": "2026-08-09T08:09:00"
+    "checked": "2026-08-10T07:56:34"
   },
   "https://www.ecwid.com/pricing": {
     "name": "Ecwid",
@@ -32,7 +32,7 @@
       "6399€",
       "7799€"
     ],
-    "checked": "2026-08-09T08:09:00"
+    "checked": "2026-08-10T07:56:34"
   },
   "https://www.shopify.com/bg/pricing": {
     "name": "Shopify",
@@ -58,7 +58,7 @@
       "8500€",
       "12000€"
     ],
-    "checked": "2026-08-09T08:09:00"
+    "checked": "2026-08-10T07:56:34"
   },
   "https://www.squarespace.com/pricing": {
     "name": "Squarespace",
@@ -70,7 +70,7 @@
       "€168",
       "€252"
     ],
-    "checked": "2026-08-09T08:09:00"
+    "checked": "2026-08-10T07:56:34"
   },
   "https://www.shift4shop.com/pricing.htm": {
     "name": "Shift4Shop",
@@ -81,7 +81,7 @@
       "$299",
       "$2,000"
     ],
-    "checked": "2026-08-09T08:09:00"
+    "checked": "2026-08-10T07:56:34"
   },
   "https://www.wix.com/plans": {
     "name": "Wix eCommerce",
@@ -92,43 +92,10 @@
       "$39",
       "$159"
     ],
-    "checked": "2026-08-09T08:09:00"
+    "checked": "2026-08-10T07:56:34"
   },
   "_plans": {
     "vendors": {
-      "CloudCart": {
-        "url": "https://cloudcart.com/pricing",
-        "plans": [
-          {
-            "name": "Baby Pack",
-            "monthly": 19.0,
-            "annual": 14.0,
-            "currency": "EUR",
-            "note": "0% transaction fee; annual price is a first-year promo"
-          },
-          {
-            "name": "Starter Pack",
-            "monthly": 39.0,
-            "annual": 33.0,
-            "currency": "EUR",
-            "note": "0% transaction fee; annual price is a first-year promo"
-          },
-          {
-            "name": "CC Pro",
-            "monthly": 99.0,
-            "annual": 83.0,
-            "currency": "EUR",
-            "note": "0% transaction fee; annual price is a first-year promo"
-          },
-          {
-            "name": "CC Master",
-            "monthly": 299.0,
-            "annual": 249.0,
-            "currency": "EUR",
-            "note": "0% transaction fee; annual price is a first-year promo"
-          }
-        ]
-      },
       "Shopify": {
         "url": "https://www.shopify.com/bg/pricing",
         "plans": [
@@ -326,6 +293,6 @@
         ]
       }
     },
-    "checked": "2026-08-09T08:09:12"
+    "checked": "2026-08-10T07:56:40"
   }
 }
