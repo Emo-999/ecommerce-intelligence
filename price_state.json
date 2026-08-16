@@ -18,7 +18,7 @@
       "$1,499",
       "$33,333"
     ],
-    "checked": "2026-08-15T06:51:50"
+    "checked": "2026-08-16T06:53:19"
   },
   "https://www.ecwid.com/pricing": {
     "name": "Ecwid",
@@ -32,7 +32,7 @@
       "6399€",
       "7799€"
     ],
-    "checked": "2026-08-15T06:51:50"
+    "checked": "2026-08-16T06:53:19"
   },
   "https://www.shopify.com/bg/pricing": {
     "name": "Shopify",
@@ -58,7 +58,7 @@
       "8500€",
       "12000€"
     ],
-    "checked": "2026-08-15T06:51:50"
+    "checked": "2026-08-16T06:53:19"
   },
   "https://www.squarespace.com/pricing": {
     "name": "Squarespace",
@@ -70,7 +70,7 @@
       "€168",
       "€252"
     ],
-    "checked": "2026-08-15T06:51:50"
+    "checked": "2026-08-16T06:53:19"
   },
   "https://www.shift4shop.com/pricing.htm": {
     "name": "Shift4Shop",
@@ -81,7 +81,7 @@
       "$299",
       "$2,000"
     ],
-    "checked": "2026-08-15T06:51:50"
+    "checked": "2026-08-16T06:53:19"
   },
   "https://www.wix.com/plans": {
     "name": "Wix eCommerce",
@@ -92,7 +92,7 @@
       "$39",
       "$159"
     ],
-    "checked": "2026-08-15T06:51:50"
+    "checked": "2026-08-16T06:53:19"
   },
   "_plans": {
     "vendors": {
@@ -293,6 +293,6 @@
         ]
       }
     },
-    "checked": "2026-08-15T06:51:55"
+    "checked": "2026-08-16T06:53:24"
   }
 }
