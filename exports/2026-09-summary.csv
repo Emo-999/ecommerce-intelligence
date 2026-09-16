@@ -1,9 +1,9 @@
 ﻿vendor,days_tracked,days_degraded,max_incidents_30d,max_downtime_30d_min,entry_eur_first,entry_eur_last,entry_eur_change,plan_price_changes,videos_30d_last
-BigCommerce,15,0,7,448.4,25.23,25.23,0.0,0,14
-CloudCart,15,0,2,0.8,,,,0,1
-Ecwid,15,0,1,47.9,5.0,5.0,0.0,0,0
-Shift4Shop,15,0,0,0,35.67,35.67,0.0,0,0
-Shopify,15,2,1,105.1,19.0,19.0,0.0,0,0
-Squarespace,15,0,3,1204.0,9.0,9.0,0.0,0,4
-Wix,15,1,4,880.0,14.79,14.79,0.0,0,0
-WooCommerce,15,0,0,0,,,,0,0
+BigCommerce,16,1,7,565.4,25.23,25.23,0.0,0,14
+CloudCart,16,0,2,0.8,,,,0,1
+Ecwid,16,0,1,47.9,5.0,5.0,0.0,0,0
+Shift4Shop,16,0,0,0,35.67,35.67,0.0,0,0
+Shopify,16,2,1,105.1,19.0,19.0,0.0,0,0
+Squarespace,16,0,3,1204.0,9.0,9.0,0.0,0,3
+Wix,16,1,4,880.0,14.79,14.79,0.0,0,0
+WooCommerce,16,0,0,0,,,,0,0
