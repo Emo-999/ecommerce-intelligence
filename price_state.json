@@ -18,7 +18,7 @@
       "$1,499",
       "$33,333"
     ],
-    "checked": "2026-09-21T12:26:39"
+    "checked": "2026-09-22T11:19:40"
   },
   "https://www.ecwid.com/pricing": {
     "name": "Ecwid",
@@ -32,7 +32,7 @@
       "6399€",
       "7799€"
     ],
-    "checked": "2026-09-21T12:26:39"
+    "checked": "2026-09-22T11:19:40"
   },
   "https://www.shopify.com/bg/pricing": {
     "name": "Shopify",
@@ -59,19 +59,25 @@
       "8500€",
       "12000€"
     ],
-    "checked": "2026-09-21T12:26:39"
+    "checked": "2026-09-22T11:19:40"
   },
   "https://www.squarespace.com/pricing": {
     "name": "Squarespace",
     "prices": [
-      "€14",
-      "€20",
-      "€30",
-      "€108",
-      "€168",
-      "€252"
+      "$19",
+      "$25",
+      "$29",
+      "$39",
+      "$49",
+      "$65",
+      "$99",
+      "$139",
+      "$250",
+      "$0.30",
+      "$0.99",
+      "$10.00"
     ],
-    "checked": "2026-09-21T12:26:39"
+    "checked": "2026-09-22T11:19:40"
   },
   "https://www.shift4shop.com/pricing.htm": {
     "name": "Shift4Shop",
@@ -82,7 +88,7 @@
       "$299",
       "$2,000"
     ],
-    "checked": "2026-09-21T12:26:39"
+    "checked": "2026-09-22T11:19:40"
   },
   "https://www.wix.com/plans": {
     "name": "Wix eCommerce",
@@ -93,7 +99,7 @@
       "$39",
       "$159"
     ],
-    "checked": "2026-09-21T12:26:39"
+    "checked": "2026-09-22T11:19:40"
   },
   "_plans": {
     "vendors": {
@@ -215,39 +221,6 @@
           }
         ]
       },
-      "Squarespace": {
-        "url": "https://www.squarespace.com/pricing",
-        "plans": [
-          {
-            "name": "Basic",
-            "monthly": 14.0,
-            "annual": 9.0,
-            "currency": "EUR",
-            "note": ""
-          },
-          {
-            "name": "Core",
-            "monthly": 20.0,
-            "annual": 14.0,
-            "currency": "EUR",
-            "note": ""
-          },
-          {
-            "name": "Advanced",
-            "monthly": 30.0,
-            "annual": 21.0,
-            "currency": "EUR",
-            "note": ""
-          },
-          {
-            "name": "Plus",
-            "monthly": 65.0,
-            "annual": 49.0,
-            "currency": "USD",
-            "note": "USD only (no EUR offer)"
-          }
-        ]
-      },
       "Ecwid": {
         "url": "https://www.ecwid.com/pricing",
         "plans": [
@@ -294,6 +267,6 @@
         ]
       }
     },
-    "checked": "2026-09-21T12:26:46"
+    "checked": "2026-09-22T11:19:47"
   }
 }
