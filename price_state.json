@@ -18,7 +18,7 @@
       "$1,499",
       "$33,333"
     ],
-    "checked": "2026-10-14T11:34:33"
+    "checked": "2026-10-15T11:11:25"
   },
   "https://www.ecwid.com/pricing": {
     "name": "Ecwid",
@@ -32,33 +32,28 @@
       "6399€",
       "7799€"
     ],
-    "checked": "2026-10-14T11:34:33"
+    "checked": "2026-10-15T11:11:25"
   },
   "https://www.shopify.com/bg/pricing": {
     "name": "Shopify",
     "prices": [
-      "0€",
-      "1€",
-      "19€",
-      "27€",
-      "56€",
-      "74€",
-      "79€",
-      "289€",
-      "384€",
-      "€1,5",
-      "€1,7",
-      "€1,8",
-      "€2,5",
-      "€2,7",
-      "€2,8",
-      "0,25€",
-      "2100€",
-      "4500€",
-      "6500€",
-      "8500€"
+      "$0",
+      "$1",
+      "$29",
+      "$39",
+      "$89",
+      "$99",
+      "$1.1",
+      "$105",
+      "$359",
+      "$399",
+      "$2,300",
+      "$5,000",
+      "$7,500",
+      "$10,000",
+      "$250,000"
     ],
-    "checked": "2026-10-14T11:34:33"
+    "checked": "2026-10-15T11:11:25"
   },
   "https://www.squarespace.com/pricing": {
     "name": "Squarespace",
@@ -76,7 +71,7 @@
       "$0.99",
       "$10.00"
     ],
-    "checked": "2026-10-14T11:34:33"
+    "checked": "2026-10-15T11:11:25"
   },
   "https://www.shift4shop.com/pricing.htm": {
     "name": "Shift4Shop",
@@ -87,7 +82,7 @@
       "$299",
       "$2,000"
     ],
-    "checked": "2026-10-14T11:34:33"
+    "checked": "2026-10-15T11:11:25"
   },
   "https://www.wix.com/plans": {
     "name": "Wix eCommerce",
@@ -98,43 +93,10 @@
       "$39",
       "$159"
     ],
-    "checked": "2026-10-14T11:34:33"
+    "checked": "2026-10-15T11:11:25"
   },
   "_plans": {
     "vendors": {
-      "Shopify": {
-        "url": "https://www.shopify.com/bg/pricing",
-        "plans": [
-          {
-            "name": "Basic",
-            "monthly": 27.0,
-            "annual": 19.0,
-            "currency": "EUR",
-            "note": ""
-          },
-          {
-            "name": "Grow",
-            "monthly": 74.0,
-            "annual": 56.0,
-            "currency": "EUR",
-            "note": ""
-          },
-          {
-            "name": "Advanced",
-            "monthly": 384.0,
-            "annual": 289.0,
-            "currency": "EUR",
-            "note": ""
-          },
-          {
-            "name": "Plus",
-            "monthly": 2100.0,
-            "annual": null,
-            "currency": "EUR",
-            "note": "from-price; no annual option"
-          }
-        ]
-      },
       "BigCommerce": {
         "url": "https://www.bigcommerce.com/pricing/",
         "plans": [
@@ -266,6 +228,6 @@
         ]
       }
     },
-    "checked": "2026-10-14T11:34:39"
+    "checked": "2026-10-15T11:11:31"
   }
 }
