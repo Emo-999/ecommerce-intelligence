@@ -18,7 +18,7 @@
       "$1,499",
       "$33,333"
     ],
-    "checked": "2026-10-20T11:15:23"
+    "checked": "2026-10-21T11:32:22"
   },
   "https://www.ecwid.com/pricing": {
     "name": "Ecwid",
@@ -32,7 +32,7 @@
       "6399€",
       "7799€"
     ],
-    "checked": "2026-10-20T11:15:23"
+    "checked": "2026-10-21T11:32:22"
   },
   "https://www.shopify.com/bg/pricing": {
     "name": "Shopify",
@@ -58,7 +58,7 @@
       "6500€",
       "8500€"
     ],
-    "checked": "2026-10-20T11:15:23"
+    "checked": "2026-10-21T11:32:22"
   },
   "https://www.squarespace.com/pricing": {
     "name": "Squarespace",
@@ -76,7 +76,7 @@
       "$0.99",
       "$10.00"
     ],
-    "checked": "2026-10-20T11:15:23"
+    "checked": "2026-10-21T11:32:22"
   },
   "https://www.shift4shop.com/pricing.htm": {
     "name": "Shift4Shop",
@@ -87,7 +87,7 @@
       "$299",
       "$2,000"
     ],
-    "checked": "2026-10-20T11:15:23"
+    "checked": "2026-10-21T11:32:22"
   },
   "https://www.wix.com/plans": {
     "name": "Wix eCommerce",
@@ -98,7 +98,7 @@
       "$39",
       "$159"
     ],
-    "checked": "2026-10-20T11:15:23"
+    "checked": "2026-10-21T11:32:22"
   },
   "_plans": {
     "vendors": {
@@ -132,39 +132,6 @@
             "annual": null,
             "currency": "EUR",
             "note": "from-price; no annual option"
-          }
-        ]
-      },
-      "BigCommerce": {
-        "url": "https://www.bigcommerce.com/pricing/",
-        "plans": [
-          {
-            "name": "Core",
-            "monthly": 39.0,
-            "annual": 29.0,
-            "currency": "USD",
-            "note": ""
-          },
-          {
-            "name": "Growth",
-            "monthly": 105.0,
-            "annual": 79.0,
-            "currency": "USD",
-            "note": ""
-          },
-          {
-            "name": "Scale",
-            "monthly": 399.0,
-            "annual": 299.0,
-            "currency": "USD",
-            "note": ""
-          },
-          {
-            "name": "Performance",
-            "monthly": null,
-            "annual": null,
-            "currency": "USD",
-            "note": "custom; from $1,499/mo annually"
           }
         ]
       },
@@ -266,6 +233,6 @@
         ]
       }
     },
-    "checked": "2026-10-20T11:15:31"
+    "checked": "2026-10-21T11:32:26"
   }
 }
