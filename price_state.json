@@ -18,7 +18,7 @@
       "$1,499",
       "$33,333"
     ],
-    "checked": "2026-10-22T11:31:12"
+    "checked": "2026-10-23T11:21:09"
   },
   "https://www.ecwid.com/pricing": {
     "name": "Ecwid",
@@ -32,7 +32,7 @@
       "6399€",
       "7799€"
     ],
-    "checked": "2026-10-22T11:31:12"
+    "checked": "2026-10-23T11:21:09"
   },
   "https://www.shopify.com/bg/pricing": {
     "name": "Shopify",
@@ -58,7 +58,7 @@
       "6500€",
       "8500€"
     ],
-    "checked": "2026-10-22T11:31:12"
+    "checked": "2026-10-23T11:21:09"
   },
   "https://www.squarespace.com/pricing": {
     "name": "Squarespace",
@@ -76,7 +76,7 @@
       "$0.99",
       "$10.00"
     ],
-    "checked": "2026-10-22T11:31:12"
+    "checked": "2026-10-23T11:21:09"
   },
   "https://www.shift4shop.com/pricing.htm": {
     "name": "Shift4Shop",
@@ -87,7 +87,7 @@
       "$299",
       "$2,000"
     ],
-    "checked": "2026-10-22T11:31:12"
+    "checked": "2026-10-23T11:21:09"
   },
   "https://www.wix.com/plans": {
     "name": "Wix eCommerce",
@@ -98,7 +98,7 @@
       "$39",
       "$159"
     ],
-    "checked": "2026-10-22T11:31:12"
+    "checked": "2026-10-23T11:21:09"
   },
   "_plans": {
     "vendors": {
@@ -108,21 +108,21 @@
           {
             "name": "Basic",
             "monthly": 27.0,
-            "annual": 19.0,
+            "annual": null,
             "currency": "EUR",
             "note": ""
           },
           {
             "name": "Grow",
             "monthly": 74.0,
-            "annual": 56.0,
+            "annual": null,
             "currency": "EUR",
             "note": ""
           },
           {
             "name": "Advanced",
             "monthly": 384.0,
-            "annual": 289.0,
+            "annual": null,
             "currency": "EUR",
             "note": ""
           },
@@ -233,6 +233,6 @@
         ]
       }
     },
-    "checked": "2026-10-22T11:31:16"
+    "checked": "2026-10-23T11:21:15"
   }
 }
