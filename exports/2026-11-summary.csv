@@ -1,0 +1,9 @@
+﻿vendor,days_tracked,days_degraded,max_incidents_30d,max_downtime_30d_min,entry_eur_first,entry_eur_last,entry_eur_change,plan_price_changes,videos_30d_last
+BigCommerce,1,0,16,4264.0,,,,0,1
+CloudCart,1,0,2,1.5,,,,0,0
+Ecwid,1,0,1,84.0,5.0,5.0,,0,0
+Shift4Shop,1,1,0,0,35.67,35.67,,0,0
+Shopify,1,0,0,0,27.0,27.0,,0,1
+Squarespace,1,0,0,0,,,,0,5
+Wix,1,0,0,0,14.79,14.79,,0,7
+WooCommerce,1,0,0,0,,,,0,0
